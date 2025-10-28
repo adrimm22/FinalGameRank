@@ -1,5 +1,5 @@
 """
-URL configuration for finalgamerank project.
+URL configuration for gamerankproject project.
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/5.1/topics/http/urls/
@@ -16,8 +16,12 @@ Including another URLconf
 """
 
 from django.contrib import admin
-from django.urls import path
+from django.urls import path, include
+from django.contrib.auth.views import LoginView, LogoutView
 
 urlpatterns = [
     path("admin/", admin.site.urls),
+    path('', include('gamerank.urls')),
+    path('login/', LoginView.as_view(template_name='registration/login.html'), name='login'),
+    path("logout/", LogoutView.as_view(template_name="registration/logged_out.html"), name="logout"),
 ]
