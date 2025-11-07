@@ -1,0 +1,24 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>{{ game.title }} · GameRank</title>
+  </head>
+  <body>
+    <p><a href="{% url 'home' %}">← Back</a></p>
+    <h1>{{ game.title }}</h1>
+    <p>
+      Platform: {{ game.platform }} · Genre: {{ game.genre }}<br>
+      Average rating: {{ average_rating|default:"N/A" }} ({{ total_votes }} votes)
+    </p>
+    <h2>Description</h2>
+    <p>{{ game.short_description|default:"No description." }}</p>
+
+    <h2>Comments</h2>
+    <div id="comments">
+      {% include 'gamerank/_comments.html' %}
+    </div>
+  </body>
+  </html>
+
+

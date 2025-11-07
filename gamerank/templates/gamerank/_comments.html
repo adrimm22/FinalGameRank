@@ -1,0 +1,12 @@
+<ul>
+  {% for c in comments %}
+    <li>
+      <strong>{{ c.user.username }}</strong>: {{ c.text }}
+      <small> · Likes: {{ c.num_likes }} · Dislikes: {{ c.num_dislikes }}</small>
+    </li>
+  {% empty %}
+    <li>No comments yet.</li>
+  {% endfor %}
+</ul>
+
+
