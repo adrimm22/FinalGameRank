@@ -108,4 +108,4 @@ def game_detail(request, game_id):
         "user_rating": user_rating,
         "user_follow": user_follow,
         "rating_range": range(1, 6),
-    })
+    })º
