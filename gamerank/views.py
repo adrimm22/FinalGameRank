@@ -236,4 +236,78 @@ def post_comment_htmx(request, game_id):
         "comments": comments,
         "game": game
     })
+    
+@login_required
+def vote_comment_htmx(request, comment_id):
+    """
+    Allows voting a comment dynamically with HTMX.
+    Registers 'like' or 'dislike' from the current user, updates counters
+    and returns the updated HTML of the comment to replace it on the page.
+    """
+    comment = get_object_or_404(Comment, id=comment_id)
+    vote_type = request.POST.get("vote_type")
 
+    if vote_type in ['like', 'dislike']:
+        CommentVote.objects.update_or_create(
+            user=request.user,
+            comment=comment,
+            defaults={'type': vote_type}
+        )
+
+    # Manual calculation of counters
+    comment.num_likes = comment.num_likes()
+    comment.num_dislikes = comment.num_dislikes()
+
+    # Detect the current user's vote
+    comment.user_vote = CommentVote.objects.filter(user=request.user, comment=comment).first()
+
+    html = render_to_string(
+        "gamerank/includes/comment_item.html",
+        {"comment": comment, "user": request.user}
+    )
+    return HttpResponse(html)
+
+
+def unified_games_api(request):
+    platform_filter = request.GET.get("platform", "").lower().strip()
+    final_games = []
+
+    if platform_filter:
+        games_dict = {}
+
+        def get_games(api_url, backup_filename):
+            if settings.DEBUG:
+                try:
+                    response = requests.get(api_url, timeout=10)
+                    response.raise_for_status()
+                    return response.json()
+                except Exception as e:
+                    print(f"❌ Error connecting to {api_url}:", e)
+                    return []
+            else:
+                try:
+                    path = os.path.join(settings.BASE_DIR, "data", backup_filename)
+                    with open(path, "r", encoding="utf-8") as f:
+                        return json.load(f)
+                except Exception as e:
+                    print(f"❌ Error reading {backup_filename}:", e)
+                    return []
+
+        games_freetogame = get_games("https://www.freetogame.com/api/games", "games_freetogame_backup.json")
+        games_mmobomb = get_games("https://www.mmobomb.com/api1/games", "games_mmobomb_backup.json")
+
+        for game in games_freetogame + games_mmobomb:
+            title = game.get("title", "").strip().lower()
+            if title and title not in games_dict:
+                games_dict[title] = game
+
+        final_games = list(games_dict.values())
+        final_games = [
+            g for g in final_games
+            if platform_filter in g.get("platform", "").lower()
+        ]
+
+    return render(request, "gamerank/games_api.html", {
+        "games": final_games,
+        "selected_platform": platform_filter
+    })
