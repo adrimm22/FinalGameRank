@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Statistics - GameRank</title>
+</head>
+<body>
+    <h1>Site Statistics</h1>
+    
+    <h2>Overview</h2>
+    <ul>
+        <li>Total Games: {{ total_games }}</li>
+        <li>Total Users: {{ total_users }}</li>
+        <li>Total Ratings: {{ total_ratings }}</li>
+        <li>Total Comments: {{ total_comments }}</li>
+        <li>Total Follows: {{ total_follows }}</li>
+        {% if overall_average %}
+        <li>Overall Average Rating: {{ overall_average }}</li>
+        {% endif %}
+    </ul>
+
+    <h2>Top Rated Games</h2>
+    <ul>
+        {% for game in top_rated_games %}
+        <li>
+            <a href="{% url 'game_detail' game.game_id %}">{{ game.title }}</a>
+            - Rating: {{ game.avg_rating|floatformat:2 }} ({{ game.rating_count }} votes)
+        </li>
+        {% empty %}
+        <li>No games rated yet.</li>
+        {% endfor %}
+    </ul>
+
+    <h2>Most Followed Games</h2>
+    <ul>
+        {% for game in most_followed_games %}
+        <li>
+            <a href="{% url 'game_detail' game.game_id %}">{{ game.title }}</a>
+            - {{ game.follow_count }} followers
+        </li>
+        {% empty %}
+        <li>No games followed yet.</li>
+        {% endfor %}
+    </ul>
+
+    <h2>Most Active Users</h2>
+    <ul>
+        {% for user in most_active_users %}
+        <li>
+            {{ user.username }} - {{ user.rating_count }} ratings, {{ user.comment_count }} comments
+        </li>
+        {% empty %}
+        <li>No active users yet.</li>
+        {% endfor %}
+    </ul>
+
+    <h2>Games by Platform</h2>
+    <ul>
+        {% for platform in games_by_platform %}
+        <li>{{ platform.platform }}: {{ platform.count }} games</li>
+        {% empty %}
+        <li>No platform data available.</li>
+        {% endfor %}
+    </ul>
+
+    <h2>Games by Genre</h2>
+    <ul>
+        {% for genre in games_by_genre %}
+        <li>{{ genre.genre }}: {{ genre.count }} games</li>
+        {% empty %}
+        <li>No genre data available.</li>
+        {% endfor %}
+    </ul>
+
+    <p>
+        <a href="{% url 'home' %}">Back to Home</a> | 
+        <a href="{% url 'activity' %}">View Activity Feed</a>
+    </p>
+</body>
+</html>

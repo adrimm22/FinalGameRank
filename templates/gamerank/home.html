@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GameRank - Home</title>
+</head>
+<body>
+    <h1>GameRank</h1>
+    
+    {% if user.is_authenticated %}
+    <p>Welcome, {{ user.username }}!</p>
+    <p>
+        <a href="{% url 'user_page' %}">My Profile</a> | 
+        <a href="{% url 'rated_games' %}">My Rated Games</a> | 
+        <a href="{% url 'followed_games' %}">Followed Games</a> | 
+        <a href="{% url 'settings_page' %}">Settings</a> | 
+        <a href="{% url 'logout' %}">Logout</a>
+    </p>
+    {% else %}
+    <p><a href="{% url 'login' %}">Login</a></p>
+    {% endif %}
+
+    <p>
+        <a href="{% url 'statistics' %}">Statistics</a> | 
+        <a href="{% url 'activity' %}">Activity Feed</a>
+    </p>
+
+    <h2>All Games (Sorted by Rating)</h2>
+    
+    {% if games %}
+    <ul>
+        {% for game in games %}
+        <li>
+            <a href="{% url 'game_detail' game.game_id %}">{{ game.title }}</a>
+            - {{ game.platform }} | {{ game.genre }}
+            {% if game.average_rating %}
+            | Rating: {{ game.average_rating }}/5 ({{ game.total_votes }} votes)
+            {% else %}
+            | No ratings yet
+            {% endif %}
+            
+            {% if user.is_authenticated %}
+            <form method="post" style="display: inline;">
+                {% csrf_token %}
+                {% if game.followed %}
+                <input type="hidden" name="game_id" value="{{ game.game_id }}">
+                <input type="hidden" name="action" value="unfollow">
+                <button type="submit">Unfollow</button>
+                {% else %}
+                <input type="hidden" name="game_id" value="{{ game.game_id }}">
+                <input type="hidden" name="action" value="follow">
+                <button type="submit">Follow</button>
+                {% endif %}
+            </form>
+            {% endif %}
+        </li>
+        {% endfor %}
+    </ul>
+    {% else %}
+    <p>No games available.</p>
+    {% endif %}
+</body>
+</html>
+

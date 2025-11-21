@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Activity Feed - GameRank</title>
+</head>
+<body>
+    <h1>Recent Activity</h1>
+    
+    <form method="get">
+        <input type="text" name="user" placeholder="Filter by username..." value="{{ user_filter }}">
+        <input type="text" name="game" placeholder="Filter by game title..." value="{{ game_filter }}">
+        <button type="submit">Filter</button>
+        {% if user_filter or game_filter %}
+        <a href="{% url 'activity' %}">Clear</a>
+        {% endif %}
+    </form>
+
+    <h2>Activity Feed</h2>
+    {% for activity in activities %}
+    <div>
+        {% if activity.type == 'comment' %}
+        <p>
+            <strong>{{ activity.user.username }}</strong> commented on 
+            <a href="{% url 'game_detail' activity.game.game_id %}">{{ activity.game.title }}</a>
+            <br>
+            "{{ activity.text }}{% if activity.text|length >= 100 %}...{% endif %}"
+            <br>
+            <small>{{ activity.timestamp|date:"M d, Y H:i" }}</small>
+        </p>
+        {% elif activity.type == 'follow' %}
+        <p>
+            <strong>{{ activity.user.username }}</strong> started following 
+            <a href="{% url 'game_detail' activity.game.game_id %}">{{ activity.game.title }}</a>
+            <br>
+            <p>{{ activity.timestamp|date:"M d, Y H:i" }}</p>
+        </p>
+        {% endif %}
+    </div>
+    {% empty %}
+    <p>No activity found.{% if user_filter or game_filter %} Try adjusting your filters.{% endif %}</p>
+    {% endfor %}
+
+    <p>
+        <a href="{% url 'home' %}">Back to Home</a> | 
+        <a href="{% url 'statistics' %}">View Statistics</a>
+    </p>
+</body>
+</html>

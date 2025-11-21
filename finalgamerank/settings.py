@@ -53,7 +53,7 @@ MIDDLEWARE = [
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
 ]
 
-ROOT_URLCONF = "gamerankproject.urls"
+ROOT_URLCONF = "finalgamerank.urls"
 
 TEMPLATES = [
     {
@@ -74,7 +74,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = "gamerankproject.wsgi.application"
+WSGI_APPLICATION = "finalgamerank.wsgi.application"
 
 
 # Database

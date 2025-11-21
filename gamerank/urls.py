@@ -30,4 +30,8 @@ urlpatterns = [
 
     # EXTRAS
     path("games/api/", views.unified_games_api, name="games_api"),
+    
+    # STATISTICS & ACTIVITY
+    path("statistics/", views.statistics, name="statistics"),
+    path("activity/", views.activity, name="activity"),
 ]
