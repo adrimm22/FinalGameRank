@@ -108,4 +108,303 @@ def game_detail(request, game_id):
         "user_rating": user_rating,
         "user_follow": user_follow,
         "rating_range": range(1, 6),
-    })º
+    })
+
+
+@login_required
+def user_page(request):
+    """
+    View for the authenticated user page.
+    Shows:
+      - Number of ratings and comments by the user.
+      - User's average rating.
+      - Rated games with their scores.
+      - Followed games.
+      - Comments made by the user.
+    """
+    user = request.user
+
+    # User ratings
+    user_ratings = Rating.objects.filter(user=user)
+    num_ratings = user_ratings.count()
+    user_average = user_ratings.aggregate(average=Avg('vote'))['average']
+    user_average = round(user_average, 2) if user_average is not None else None
+
+    # User comments
+    user_comments = Comment.objects.filter(user=user).select_related('game')
+    num_user_comments = user_comments.count()
+
+    # Rated games with score
+    rated_games = [(r.game, r.vote) for r in user_ratings.select_related('game')]
+
+    # Games followed by the user
+    followed_games = Game.objects.filter(follow__user=user).distinct()
+
+    return render(request, 'gamerank/user_page.html', {
+        'user': user,
+        'num_ratings': num_ratings,
+        'user_average': user_average,
+        'num_user_comments': num_user_comments,
+        'rated_games': rated_games,
+        'followed_games': followed_games,
+        'user_comments': user_comments,
+    })
+
+
+@login_required
+def rated_games(request):
+    """
+    Shows the games rated by the user, ordered by the rating.
+    Allows follow/unfollow directly from this view.
+    """
+    ratings = Rating.objects.filter(user=request.user).select_related('game')
+    games = []
+
+    for r in ratings:
+        game = r.game
+        game.my_vote = r.vote
+        game.score = game.average_rating()
+        game.total_votes = game.total_votes()
+        games.append(game)
+
+    games.sort(key=lambda g: g.my_vote, reverse=True)
+
+    # Process follow/unfollow action if there is POST
+    response = process_following(request, games, "home")
+    if response:
+        return response
+
+    # Retrieve followed games to mark active buttons
+    followed_ids = get_followed_games_ids(request.user)
+
+    return render(request, 'gamerank/rated_games.html', {
+        'games': games,
+        'followed_ids': followed_ids,
+    })
+
+
+@login_required
+def followed_games(request):
+    """
+    Shows the games that the user follows, ordered by average rating.
+    Allows unfollow directly from this view.
+    """
+    follows = Follow.objects.filter(user=request.user).select_related('game')
+    games = [f.game for f in follows]
+    games.sort(key=lambda g: g.average_rating() or 0, reverse=True)
+
+    # Process follow/unfollow action if there is POST
+    response = process_following(request, games, "followed_games")
+    if response:
+        return response  # Nothing else should go here
+
+    # Retrieve followed games to mark active buttons
+    followed_ids = get_followed_games_ids(request.user)
+
+    return render(request, 'gamerank/followed_games.html', {
+        'games': games,
+        'followed_ids': followed_ids,
+    })
+
+
+@login_required
+def settings_page(request):
+    """
+    Allows the user to change their alias, font type and text size.
+    """
+    config, _ = UserSettings.objects.get_or_create(user=request.user)
+
+    if request.method == "POST":
+        alias = request.POST.get("alias", "").strip()
+        font_type = request.POST.get("font_type", "")
+        text_size = request.POST.get("text_size", "")
+
+        config.alias = alias
+        config.font_type = font_type
+        config.text_size = text_size
+        config.save()
+
+        messages.success(request, "Your settings have been updated successfully.")
+        return redirect("settings_page")
+
+    return render(request, "gamerank/settings.html")
+
+
+@login_required
+def vote_comment(request, comment_id):
+    """
+    Allows a user to like or dislike a comment.
+    Updates the vote if there was a previous one.
+    """
+    comment = get_object_or_404(Comment, id=comment_id)
+    vote_type = request.POST.get("vote_type")
+
+    if vote_type in ['like', 'dislike']:
+        CommentVote.objects.update_or_create(
+            user=request.user,
+            comment=comment,
+            defaults={'type': vote_type}
+        )
+
+    return redirect(request.META.get('HTTP_REFERER', '/'))
+
+
+@require_GET
+def game_json(request, game_id):
+    """
+    Returns the data of a game in JSON format, including number of comments.
+    """
+    game = get_object_or_404(Game, game_id=game_id)
+    comments_count = Comment.objects.filter(game=game).count()
+    average_rating = game.average_rating()
+
+    data = {
+        "game_id": game.game_id,
+        "title": game.title,
+        "genre": game.genre,
+        "platform": game.platform,
+        "developer": game.developer,
+        "publisher": game.publisher,
+        "release_date": game.release_date.strftime('%Y-%m-%d') if game.release_date else None,
+        "short_description": game.short_description,
+        "game_url": game.game_url,
+        "thumbnail": game.thumbnail,
+        "average_rating": round(average_rating, 2) if average_rating is not None else None,
+        "comments_count": comments_count
+    }
+
+    return JsonResponse(data)
+
+
+@login_required
+def game_detail_htmx(request, game_id):
+    """
+    Main page with HTMX. Loads dynamic sections (comments + form).
+    """
+    game = get_object_or_404(Game, game_id=game_id)
+    followed = game.follow_set.filter(user=request.user).exists()
+    user_rating = Rating.objects.filter(game=game, user=request.user).first()
+
+    # Load comments for the game with like/dislike counters already calculated
+    comments = comments_with_votes(game)
+
+    return render(request, "gamerank/game_detail_htmx.html", {
+        "game": game,
+        "followed": followed,
+        "user_rating": user_rating,
+        "rating_range": range(1, 6),
+        "comments": comments,
+    })
+
+
+@require_GET
+@login_required
+def comments_htmx(request, game_id):
+    """
+    Returns only the comments of the game in HTML for HTMX.
+    """
+    game = get_object_or_404(Game, game_id=game_id)
+    comments = comments_with_votes(game)
+    return render(request, "gamerank/includes/comments_htmx.html", {
+        "comments": comments
+    })
+
+
+@require_POST
+@login_required
+def post_comment_htmx(request, game_id):
+    """
+    Publishes a new comment and returns the updated HTML list.
+    """
+    game = get_object_or_404(Game, game_id=game_id)
+    text = request.POST.get("comment_text", "").strip()
+
+    if text:
+        Comment.objects.create(
+            game=game,
+            user=request.user,
+            text=text,
+            date=timezone.now()
+        )
+
+    comments = comments_with_votes(game)
+    return render(request, "gamerank/includes/comments_htmx.html", {
+        "comments": comments,
+        "game": game
+    })
+
+
+@login_required
+def vote_comment_htmx(request, comment_id):
+    """
+    Allows voting a comment dynamically with HTMX.
+    Registers 'like' or 'dislike' from the current user, updates counters
+    and returns the updated HTML of the comment to replace it on the page.
+    """
+    comment = get_object_or_404(Comment, id=comment_id)
+    vote_type = request.POST.get("vote_type")
+
+    if vote_type in ['like', 'dislike']:
+        CommentVote.objects.update_or_create(
+            user=request.user,
+            comment=comment,
+            defaults={'type': vote_type}
+        )
+
+    # Manual calculation of counters
+    comment.num_likes = comment.num_likes()
+    comment.num_dislikes = comment.num_dislikes()
+
+    # Detect the current user's vote
+    comment.user_vote = CommentVote.objects.filter(user=request.user, comment=comment).first()
+
+    html = render_to_string(
+        "gamerank/includes/comment_item.html",
+        {"comment": comment, "user": request.user}
+    )
+    return HttpResponse(html)
+
+
+def unified_games_api(request):
+    platform_filter = request.GET.get("platform", "").lower().strip()
+    final_games = []
+
+    if platform_filter:
+        games_dict = {}
+
+        def get_games(api_url, backup_filename):
+            if settings.DEBUG:
+                try:
+                    response = requests.get(api_url, timeout=10)
+                    response.raise_for_status()
+                    return response.json()
+                except Exception as e:
+                    print(f"❌ Error connecting to {api_url}:", e)
+                    return []
+            else:
+                try:
+                    path = os.path.join(settings.BASE_DIR, "data", backup_filename)
+                    with open(path, "r", encoding="utf-8") as f:
+                        return json.load(f)
+                except Exception as e:
+                    print(f"❌ Error reading {backup_filename}:", e)
+                    return []
+
+        games_freetogame = get_games("https://www.freetogame.com/api/games", "games_freetogame_backup.json")
+        games_mmobomb = get_games("https://www.mmobomb.com/api1/games", "games_mmobomb_backup.json")
+
+        for game in games_freetogame + games_mmobomb:
+            title = game.get("title", "").strip().lower()
+            if title and title not in games_dict:
+                games_dict[title] = game
+
+        final_games = list(games_dict.values())
+        final_games = [
+            g for g in final_games
+            if platform_filter in g.get("platform", "").lower()
+        ]
+
+    return render(request, "gamerank/games_api.html", {
+        "games": final_games,
+        "selected_platform": platform_filter
+    })

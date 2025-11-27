@@ -53,7 +53,7 @@ MIDDLEWARE = [
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
 ]
 
-ROOT_URLCONF = "gamerankproject.urls"
+ROOT_URLCONF = "finalgamerank.urls"
 
 TEMPLATES = [
     {
@@ -67,8 +67,8 @@ TEMPLATES = [
                 "django.contrib.auth.context_processors.auth",
                 "django.contrib.messages.context_processors.messages",
                 "gamerank.context_processor.user_alias",
-                "gamerank.context_processor.metricas_footer",
-                "gamerank.context_processor.configuracion_usuario",
+                "gamerank.context_processor.footer_metrics",
+                "gamerank.context_processor.user_settings",
             ],
         },
     },
@@ -109,7 +109,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 # Internationalization
 # https://docs.djangoproject.com/en/5.1/topics/i18n/
-LANGUAGE_CODE = "es"
+LANGUAGE_CODE = "en-us"
 
 USE_I18N = True
 USE_L10N = True
