@@ -1,0 +1,96 @@
+{% extends "gamerank/base.html" %}
+
+{% block content %}
+<div class="container mt-5">
+
+    <div class="mb-4 text-center">
+        <h2 class="mb-1">👤 User Profile</h2>
+        <p class="lead">Alias: <strong>{{ user_alias }}</strong></p>
+    </div>
+
+    <div class="card mb-4 shadow-sm">
+        <div class="card-header bg-light">
+            <i class="fas fa-chart-bar me-2"></i>Stats Summary
+        </div>
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item">Total ratings given: {{ num_ratings }}</li>
+            <li class="list-group-item">
+                Average rating score:
+                {% if user_average %}
+                    {{ user_average }}
+                {% else %}
+                    <span class="text-muted">N/A</span>
+                {% endif %}
+            </li>
+            <li class="list-group-item">Total comments posted: {{ num_user_comments }}</li>
+
+            <li class="list-group-item">Total games on platform: {{ total_games }}</li>
+            <li class="list-group-item">Total comments on platform: {{ total_comments }}</li>
+        </ul>
+    </div>
+
+    <div class="mb-5 d-flex gap-3 justify-content-center">
+        <a href="{% url 'rated_games' %}" class="btn btn-outline-primary">
+            ⭐ Rated Games
+        </a>
+        <a href="{% url 'followed_games' %}" class="btn btn-outline-success">
+            ❤️ Watchlist
+        </a>
+    </div>
+
+    <div class="card mb-5 shadow-sm">
+        <div class="card-header bg-light">
+            <i class="fas fa-star me-2"></i>Rated Games
+        </div>
+        {% if rated_games %}
+            <ul class="list-group list-group-flush">
+                {% for game, vote in rated_games %}
+                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                        <a href="{% url 'game_detail' game.game_id %}">{{ game.title }}</a>
+                        <span class="badge bg-info text-dark">Vote: {{ vote }}</span>
+                    </li>
+                {% endfor %}
+            </ul>
+        {% else %}
+            <div class="card-body text-muted">You haven't rated any games yet.</div>
+        {% endif %}
+    </div>
+
+    <div class="card mb-5 shadow-sm">
+        <div class="card-header bg-light">
+            <i class="fas fa-heart me-2"></i>Watchlist
+        </div>
+        {% if followed_games %}
+            <ul class="list-group list-group-flush">
+                {% for game in followed_games %}
+                    <li class="list-group-item">
+                        <a href="{% url 'game_detail' game.game_id %}">{{ game.title }}</a>
+                    </li>
+                {% endfor %}
+            </ul>
+        {% else %}
+            <div class="card-body text-muted">You are not following any games yet.</div>
+        {% endif %}
+    </div>
+
+    <div class="card mb-5 shadow-sm">
+        <div class="card-header bg-light">
+            <i class="fas fa-comments me-2"></i>My Comments
+        </div>
+        {% if user_comments %}
+            <ul class="list-group list-group-flush">
+                {% for comment in user_comments %}
+                    <li class="list-group-item">
+                        <strong>Game:</strong> {{ comment.game.title }}<br>
+                        {{ comment.text }}<br>
+                        <small class="text-muted">Posted on {{ comment.date|date:"Y-m-d H:i" }}</small>
+                    </li>
+                {% endfor %}
+            </ul>
+        {% else %}
+            <div class="card-body text-muted">You haven't posted any comments yet.</div>
+        {% endif %}
+    </div>
+
+</div>
+{% endblock %}

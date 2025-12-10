@@ -1,0 +1,18 @@
+{% extends "gamerank/base.html" %}
+
+{% block content %}
+<div class="container d-flex justify-content-center align-items-center" style="min-height: 60vh;">
+    <div class="card shadow p-4 text-center" style="max-width: 500px; width: 100%;">
+
+        <h2 class="mb-3">You have successfully logged out</h2>
+        <p>Thanks for using <strong>GameRank</strong>.</p>
+
+        <a href="{% url 'login' %}" class="btn btn-outline-primary mt-3">
+            Log in again
+        </a>
+        <a href="{% url 'home' %}" class="btn btn-link mt-2">
+            ← Back to Home
+        </a>
+    </div>
+</div>
+{% endblock %}

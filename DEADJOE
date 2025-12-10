@@ -61,3 +61,24 @@ Processing '/etc/joe/editorrc'...
 Processing '/etc/joe/ftyperc'...
 Finished processing /etc/joe/ftyperc
 Finished processing /etc/joe/editorrc
+
+*** These modified files were found in JOE when it aborted on Fri Nov 28 06:00:01 2025
+*** JOE was aborted because the terminal closed
+
+*** File '(Unnamed)'
+/home/alumnos/adrimm/teamproject/finalgamerank/.git/MERGE_MSG
+
+*** File '/home/alumnos/adrimm/teamproject/finalgamerank/.git/MERGE_MSG'
+Merge branch 'main' of github.com:adrimm22/FinalGameRank
+# Por favor ingresa un mensaje de commit que explique por qué es necesaria esta fusión,
+# especialmente si esto fusiona un upstream actualizado en una rama de tópico.
+#
+# Líneas comenzando con '#' serán ignoradas, y un mensaje vacío aborta
+# el commit.
+
+I
+*** File '* Startup Log *'
+Processing '/etc/joe/editorrc'...
+Processing '/etc/joe/ftyperc'...
+Finished processing /etc/joe/ftyperc
+Finished processing /etc/joe/editorrc

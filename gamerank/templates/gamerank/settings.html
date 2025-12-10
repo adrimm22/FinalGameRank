@@ -1,0 +1,60 @@
+{% extends "gamerank/base.html" %}
+
+{% block content %}
+
+<section class="section-title">🎛️ Customize your experience</section>
+
+<div class="row justify-content-center">
+    <div class="col-md-6">
+        <div class="card shadow p-4 border-0">
+
+            <form method="POST">
+                {% csrf_token %}
+
+                <div class="mb-3">
+                    <label for="alias" class="form-label">
+                        <i class="fas fa-user-edit"></i> Alias
+                    </label>
+                    <input type="text" id="alias" name="alias" class="form-control" value="{{ user_config.alias }}">
+                    <div class="form-text">This name will appear in the header.</div>
+                </div>
+
+                <div class="mb-3">
+                    <label for="font_type" class="form-label">
+                        <i class="fas fa-font"></i> Font Type
+                    </label>
+                    <select id="font_type" name="font_type" class="form-select">
+                        <option value="fuente-sans-serif" {% if user_config.font_type == "fuente-sans-serif" %}selected{% endif %}>Sans Serif</option>
+                        <option value="fuente-serif" {% if user_config.font_type == "fuente-serif" %}selected{% endif %}>Serif</option>
+                        <option value="fuente-monospace" {% if user_config.font_type == "fuente-monospace" %}selected{% endif %}>Monospaced</option>
+                        <option value="fuente-decorativa" {% if user_config.font_type == "fuente-decorativa" %}selected{% endif %}>Decorative</option>
+                    </select>
+                </div>
+
+                <div class="mb-3">
+                    <label for="text_size" class="form-label">
+                        <i class="fas fa-text-height"></i> Text Size
+                    </label>
+                    <select id="text_size" name="text_size" class="form-select">
+                        <option value="tamano-small" {% if user_config.text_size == "tamano-small" %}selected{% endif %}>Small</option>
+                        <option value="tamano-medium" {% if user_config.text_size == "tamano-medium" %}selected{% endif %}>Medium</option>
+                        <option value="tamano-large" {% if user_config.text_size == "tamano-large" %}selected{% endif %}>Large</option>
+                        <option value="tamano-xl" {% if user_config.text_size == "tamano-xl" %}selected{% endif %}>Extra Large</option>
+                    </select>
+                </div>
+
+                <div class="d-grid">
+                    <button type="submit" class="btn btn-success">
+                        <i class="fas fa-save"></i> Save changes
+                    </button>
+                </div>
+            </form>
+
+            <div class="text-center mt-4">
+                <a href="{% url 'user_page' %}" class="btn btn-link">← Back to profile</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
