@@ -1,5 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+    {% comment %} Stars using Font Awesome {% endcomment %}
+{% for i in "12345" %}
+    {% if forloop.counter <= score %}
+        <i class="fas fa-star text-warning" title="{{ forloop.counter }}/5"></i>
+    {% else %}
+        <i class="far fa-star text-warning" title="{{ forloop.counter }}/5"></i>
+    {% endif %}
+{% endfor %}
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
@@ -8,11 +16,3 @@
 
 </body>
 </html>
-{% comment %} Stars using Font Awesome {% endcomment %}
-{% for i in "12345" %}
-    {% if forloop.counter <= score %}
-        <i class="fas fa-star text-warning" title="{{ forloop.counter }}/5"></i>
-    {% else %}
-        <i class="far fa-star text-warning" title="{{ forloop.counter }}/5"></i>
-    {% endif %}
-{% endfor %}
