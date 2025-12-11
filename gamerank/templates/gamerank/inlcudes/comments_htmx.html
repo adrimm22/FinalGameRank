@@ -8,3 +8,10 @@
 
 </body>
 </html>
+<ul class="list-group list-group-flush">
+    {% for comment in comments %}
+        {% include "gamerank/includes/comment_item.html" %}
+    {% empty %}
+        <li class="list-group-item text-muted text-center">No comments yet. Be the first to share your opinion!</li>
+    {% endfor %}
+</ul>
