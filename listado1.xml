@@ -1,0 +1,1026 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<games>
+   <game>
+      <developer>InnoGames</developer>
+      <freetogame_profile_url>https://www.freetogame.com/forge-of-empires</freetogame_profile_url>
+      <game_url>https://www.freetogame.com/open/forge-of-empires</game_url>
+      <genre>Strategy</genre>
+      <id>345</id>
+      <platform>Web Browser</platform>
+      <publisher>InnoGames</publisher>
+      <release_date>2012-04-17</release_date>
+      <short_description>A free to play 2D browser-based online strategy game, become the leader and raise your city.</short_description>
+      <thumbnail>https://www.freetogame.com/g/345/thumbnail.jpg</thumbnail>
+      <title>Forge of Empires</title>
+   </game>
+   <game>
+      <developer>YOOZOO Games </developer>
+      <freetogame_profile_url>https://www.freetogame.com/game-of-thrones-winter-is-coming</freetogame_profile_url>
+      <game_url>https://www.freetogame.com/open/game-of-thrones-winter-is-coming</game_url>
+      <genre>Strategy</genre>
+      <id>340</id>
+      <platform>Web Browser</platform>
+      <publisher>GTArcade</publisher>
+      <release_date>2019-11-14</release_date>
+      <short_description>A free-to-play browser-based RTS based on the George R.R. Martin novels and popular HBO series.</short_description>
+      <thumbnail>https://www.freetogame.com/g/340/thumbnail.jpg</thumbnail>
+      <title>Game Of Thrones Winter Is Coming</title>
+   </game>
+   <game>
+      <developer>InnoGames</developer>
+      <freetogame_profile_url>https://www.freetogame.com/elvenar</freetogame_profile_url>
+      <game_url>https://www.freetogame.com/open/elvenar</game_url>
+      <genre>Strategy</genre>
+      <id>347</id>
+      <platform>Web Browser</platform>
+      <publisher>InnoGames</publisher>
+      <release_date>2015-04-08</release_date>
+      <short_description>A browser based city-building strategy MMO set in the fantasy world of Elvenar.</short_description>
+      <thumbnail>https://www.freetogame.com/g/347/thumbnail.jpg</thumbnail>
+      <title>Elvenar</title>
+   </game>
+   <game>
+      <developer>Bigpoint</developer>
+      <freetogame_profile_url>https://www.freetogame.com/darkorbit</freetogame_profile_url>
+      <game_url>https://www.freetogame.com/open/darkorbit</game_url>
+      <genre>Shooter</genre>
+      <id>380</id>
+      <platform>Web Browser</platform>
+      <publisher>Bigpoint</publisher>
+      <release_date>2006-12-11</release_date>
+      <short_description>A browser-based 3D space-combat MMO with a massive playerbase!</short_description>
+      <thumbnail>https://www.freetogame.com/g/380/thumbnail.jpg</thumbnail>
+      <title>Dark Orbit Reloaded</title>
+   </game>
+   <game>
+      <developer>Game Hollywood Games</developer>
+      <freetogame_profile_url>https://www.freetogame.com/titan-revenge</freetogame_profile_url>
+      <game_url>https://www.freetogame.com/open/titan-revenge</game_url>
+      <genre>MMORPG</genre>
+      <id>573</id>
+      <platform>Web Browser</platform>
+      <publisher>Game Hollywood Games</publisher>
+      <release_date>2023-12-20</release_date>
+      <short_description>A 3D Norse-themed browser MMORPG developed and published by Game Hollywood Games</short_description>
+      <thumbnail>https://www.freetogame.com/g/573/thumbnail.jpg</thumbnail>
+      <title>Titan Revenge</title>
+   </game>
+   <game>
+      <developer>Gala Lab</developer>
+      <freetogame_profile_url>https://www.freetogame.com/flyff-universe</freetogame_profile_url>
+      <game_url>https://www.freetogame.com/open/flyff-universe</game_url>
+      <genre>MMORPG</genre>
+      <id>522</id>
+      <platform>Web Browser</platform>
+      <publisher>Gala Lab</publisher>
+      <release_date>2022-06-14</release_date>
+      <short_description>Get the full Flyff experience on any platform with the free-to-play browser-based MMORPG Flyff Universe.</short_description>
+      <thumbnail>https://www.freetogame.com/g/522/thumbnail.jpg</thumbnail>
+      <title>Flyff Universe</title>
+   </game>
+   <game>
+      <developer>R2 Games</developer>
+      <freetogame_profile_url>https://www.freetogame.com/eternal-fury</freetogame_profile_url>
+      <game_url>https://www.freetogame.com/open/eternal-fury</game_url>
+      <genre>MMORPG</genre>
+      <id>455</id>
+      <platform>Web Browser</platform>
+      <publisher>R2 Games</publisher>
+      <release_date>2019-05-21</release_date>
+      <short_description>A free-to-play ARPG from R2 Games!</short_description>
+      <thumbnail>https://www.freetogame.com/g/455/thumbnail.jpg</thumbnail>
+      <title>Eternal Fury</title>
+   </game>
+   <game>
+      <developer>Yoozoo Games</developer>
+      <freetogame_profile_url>https://www.freetogame.com/league-of-angels-heavens-fury</freetogame_profile_url>
+      <game_url>https://www.freetogame.com/open/league-of-angels-heavens-fury</game_url>
+      <genre>MMORPG</genre>
+      <id>458</id>
+      <platform>Web Browser</platform>
+      <publisher>Gtarcade</publisher>
+      <release_date>2020-01-09</release_date>
+      <short_description>A free-to-play, browser-based fantasy online action RPG based loosely on Western mythology!</short_description>
+      <thumbnail>https://www.freetogame.com/g/458/thumbnail.jpg</thumbnail>
+      <title>League of Angels - Heaven's Fury</title>
+   </game>
+   <game>
+      <developer>Goodgame Studios</developer>
+      <freetogame_profile_url>https://www.freetogame.com/goodgame-empire</freetogame_profile_url>
+      <game_url>https://www.freetogame.com/open/goodgame-empire</game_url>
+      <genre>Strategy</genre>
+      <id>350</id>
+      <platform>Web Browser</platform>
+      <publisher>Goodgame Studios</publisher>
+      <release_date>2011-08-14</release_date>
+      <short_description>A free to play medieval strategy browser game. Build you own castle and create a powerful army! </short_description>
+      <thumbnail>https://www.freetogame.com/g/350/thumbnail.jpg</thumbnail>
+      <title>Goodgame Empire</title>
+   </game>
+   <game>
+      <developer>Bigpoint</developer>
+      <freetogame_profile_url>https://www.freetogame.com/drakensang-online</freetogame_profile_url>
+      <game_url>https://www.freetogame.com/open/drakensang-online</game_url>
+      <genre>MMORPG</genre>
+      <id>427</id>
+      <platform>Web Browser</platform>
+      <publisher>Bigpoint</publisher>
+      <release_date>2011-08-08</release_date>
+      <short_description>A free to play browser-based top-down hack-and-slash 3D MMORPG similar to games in the Diablo series.</short_description>
+      <thumbnail>https://www.freetogame.com/g/427/thumbnail.jpg</thumbnail>
+      <title>Drakensang Online</title>
+   </game>
+   <game>
+      <developer>Jagex</developer>
+      <freetogame_profile_url>https://www.freetogame.com/runescape</freetogame_profile_url>
+      <game_url>https://www.freetogame.com/open/runescape</game_url>
+      <genre>MMORPG</genre>
+      <id>433</id>
+      <platform>PC (Windows), Web Browser</platform>
+      <publisher>Jagex</publisher>
+      <release_date>2001-01-04</release_date>
+      <short_description>A popular 3D browser MMORPG boasting a huge player base and 15 years of content.</short_description>
+      <thumbnail>https://www.freetogame.com/g/433/thumbnail.jpg</thumbnail>
+      <title>RuneScape</title>
+   </game>
+   <game>
+      <developer>FireFly Studios</developer>
+      <freetogame_profile_url>https://www.freetogame.com/stronghold-kingdoms</freetogame_profile_url>
+      <game_url>https://www.freetogame.com/open/stronghold-kingdoms</game_url>
+      <genre>Strategy</genre>
+      <id>255</id>
+      <platform>Web Browser</platform>
+      <publisher>FireFly Studios</publisher>
+      <release_date>2012-02-28</release_date>
+      <short_description>A strategy based building/warfare game based on the long running Strongholds PC game series.</short_description>
+      <thumbnail>https://www.freetogame.com/g/255/thumbnail.jpg</thumbnail>
+      <title>Stronghold Kingdoms</title>
+   </game>
+   <game>
+      <developer>Coke And Code</developer>
+      <freetogame_profile_url>https://www.freetogame.com/tales-of-yore</freetogame_profile_url>
+      <game_url>https://www.freetogame.com/open/tales-of-yore</game_url>
+      <genre>MMORPG</genre>
+      <id>559</id>
+      <platform>PC (Windows), Web Browser</platform>
+      <publisher>Coke And Code</publisher>
+      <release_date>2023-08-08</release_date>
+      <short_description>A 2D MMORPG with lots of RPG tropes.</short_description>
+      <thumbnail>https://www.freetogame.com/g/559/thumbnail.jpg</thumbnail>
+      <title>Tales Of Yore</title>
+   </game>
+   <game>
+      <developer>R2 Games</developer>
+      <freetogame_profile_url>https://www.freetogame.com/world-of-runes</freetogame_profile_url>
+      <game_url>https://www.freetogame.com/open/world-of-runes</game_url>
+      <genre>MMORPG</genre>
+      <id>532</id>
+      <platform>Web Browser</platform>
+      <publisher>F5 Game Company Limited</publisher>
+      <release_date>2022-06-13</release_date>
+      <short_description>An adorable anime-style MMO featuring cute pets and collectable cards.</short_description>
+      <thumbnail>https://www.freetogame.com/g/532/thumbnail.jpg</thumbnail>
+      <title>World of Runes</title>
+   </game>
+   <game>
+      <developer>R2 Games</developer>
+      <freetogame_profile_url>https://www.freetogame.com/armor-valor</freetogame_profile_url>
+      <game_url>https://www.freetogame.com/open/armor-valor</game_url>
+      <genre>Strategy</genre>
+      <id>471</id>
+      <platform>Web Browser</platform>
+      <publisher>R2 Games</publisher>
+      <release_date>2020-07-20</release_date>
+      <short_description>Build your empire with the help of mythical heroes and well thought out strategy in R2 Games’ strategy RPG Armor Valor.</short_description>
+      <thumbnail>https://www.freetogame.com/g/471/thumbnail.jpg</thumbnail>
+      <title>Armor Valor</title>
+   </game>
+   <game>
+      <developer>101XP</developer>
+      <freetogame_profile_url>https://www.freetogame.com/jade-goddess</freetogame_profile_url>
+      <game_url>https://www.freetogame.com/open/jade-goddess</game_url>
+      <genre>MMORPG</genre>
+      <id>472</id>
+      <platform>Web Browser</platform>
+      <publisher>101XP</publisher>
+      <release_date>2020-06-15</release_date>
+      <short_description>Jade Goddess is a free-to-play, browser based MMO inspired by Eastern mythology.</short_description>
+      <thumbnail>https://www.freetogame.com/g/472/thumbnail.jpg</thumbnail>
+      <title>Jade Goddess</title>
+   </game>
+   <game>
+      <developer>GameHollywood</developer>
+      <freetogame_profile_url>https://www.freetogame.com/survivor-legacy</freetogame_profile_url>
+      <game_url>https://www.freetogame.com/open/survivor-legacy</game_url>
+      <genre>Strategy</genre>
+      <id>463</id>
+      <platform>Web Browser</platform>
+      <publisher>R2 Games</publisher>
+      <release_date>2020-04-07</release_date>
+      <short_description>Survivor Legacy is a free-to-play zombie-themed strategy game from R2 Games.</short_description>
+      <thumbnail>https://www.freetogame.com/g/463/thumbnail.jpg</thumbnail>
+      <title>Survivor Legacy</title>
+   </game>
+   <game>
+      <developer>Retrelon Games</developer>
+      <freetogame_profile_url>https://www.freetogame.com/mirage-online-classic</freetogame_profile_url>
+      <game_url>https://www.freetogame.com/open/mirage-online-classic</game_url>
+      <genre>MMORPG</genre>
+      <id>535</id>
+      <platform>Web Browser</platform>
+      <publisher>Retrelon Games</publisher>
+      <release_date>2019-12-24</release_date>
+      <short_description>A browser-based free-to-play spiritual successor to 2001's Mirage Online.</short_description>
+      <thumbnail>https://www.freetogame.com/g/535/thumbnail.jpg</thumbnail>
+      <title>Mirage Online Classic</title>
+   </game>
+   <game>
+      <developer>Moonmana</developer>
+      <freetogame_profile_url>https://www.freetogame.com/ultimate-pirates</freetogame_profile_url>
+      <game_url>https://www.freetogame.com/open/ultimate-pirates</game_url>
+      <genre>Strategy</genre>
+      <id>443</id>
+      <platform>Web Browser</platform>
+      <publisher>Gameforge</publisher>
+      <release_date>2019-12-02</release_date>
+      <short_description>A browser-based strategy MMO published for both desktop and mobile browsers by Gameforge.  </short_description>
+      <thumbnail>https://www.freetogame.com/g/443/thumbnail.jpg</thumbnail>
+      <title>Ultimate Pirates</title>
+   </game>
+   <game>
+      <developer>F5 Game Company</developer>
+      <freetogame_profile_url>https://www.freetogame.com/vampire-empire</freetogame_profile_url>
+      <game_url>https://www.freetogame.com/open/vampire-empire</game_url>
+      <genre>Strategy</genre>
+      <id>440</id>
+      <platform>Web Browser</platform>
+      <publisher>R2 Games</publisher>
+      <release_date>2019-11-07</release_date>
+      <short_description>A multiplayer strategy game that focuses on the war between vampires and werewolves. </short_description>
+      <thumbnail>https://www.freetogame.com/g/440/thumbnail.jpg</thumbnail>
+      <title>Vampire Empire</title>
+   </game>
+   <game>
+      <developer>Holyday Studios</developer>
+      <freetogame_profile_url>https://www.freetogame.com/firestone-idle-rpg</freetogame_profile_url>
+      <game_url>https://www.freetogame.com/open/firestone-idle-rpg</game_url>
+      <genre>Strategy</genre>
+      <id>468</id>
+      <platform>Web Browser</platform>
+      <publisher>Holyday Studios</publisher>
+      <release_date>2019-09-26</release_date>
+      <short_description>Set in the fantasy world of Alandria, Firestone is an idle RPG in which players are tasked with building the best possible party of heroes and using them to defeat the undead and orcs that plague the world.</short_description>
+      <thumbnail>https://www.freetogame.com/g/468/thumbnail.jpg</thumbnail>
+      <title>Firestone Idle RPG</title>
+   </game>
+   <game>
+      <developer>Opogame</developer>
+      <freetogame_profile_url>https://www.freetogame.com/dark-knight</freetogame_profile_url>
+      <game_url>https://www.freetogame.com/open/dark-knight</game_url>
+      <genre>MMORPG</genre>
+      <id>445</id>
+      <platform>Web Browser</platform>
+      <publisher>Opogame</publisher>
+      <release_date>2019-08-06</release_date>
+      <short_description>A browser-based fantasy MMOARPG wherein players take on the role of a devil hunter descended from the gods.</short_description>
+      <thumbnail>https://www.freetogame.com/g/445/thumbnail.jpg</thumbnail>
+      <title>Dark Knight</title>
+   </game>
+   <game>
+      <developer>PG5-Studio UG</developer>
+      <freetogame_profile_url>https://www.freetogame.com/steinworld</freetogame_profile_url>
+      <game_url>https://www.freetogame.com/open/steinworld</game_url>
+      <genre>MMORPG</genre>
+      <id>353</id>
+      <platform>Web Browser</platform>
+      <publisher>PG5-Studio UG</publisher>
+      <release_date>2019-04-24</release_date>
+      <short_description>A free-to-play, browser-based online fantasy role &#xD;
+playing game done in an old-school &#xD;
+16-bit style.</short_description>
+      <thumbnail>https://www.freetogame.com/g/353/thumbnail.jpg</thumbnail>
+      <title>Stein.world</title>
+   </game>
+   <game>
+      <developer>R2 Games</developer>
+      <freetogame_profile_url>https://www.freetogame.com/the-third-age</freetogame_profile_url>
+      <game_url>https://www.freetogame.com/open/the-third-age</game_url>
+      <genre>Strategy</genre>
+      <id>457</id>
+      <platform>Web Browser</platform>
+      <publisher>R2 Games</publisher>
+      <release_date>2019-04-29</release_date>
+      <short_description>A free-to-play browser-based Strategy MMO game focused on story-based PvE gameplay!</short_description>
+      <thumbnail>https://www.freetogame.com/g/457/thumbnail.jpg</thumbnail>
+      <title>The Third Age</title>
+   </game>
+   <game>
+      <developer>GTArcade Entertainment</developer>
+      <freetogame_profile_url>https://www.freetogame.com/league-of-angels-3</freetogame_profile_url>
+      <game_url>https://www.freetogame.com/open/league-of-angels-3</game_url>
+      <genre>MMORPG</genre>
+      <id>341</id>
+      <platform>Web Browser</platform>
+      <publisher>GTArcade Entertainment</publisher>
+      <release_date>2018-08-14</release_date>
+      <short_description>A free-to-play turn-based strategy browser game developed and published by GTArcade Entertainment, Inc.</short_description>
+      <thumbnail>https://www.freetogame.com/g/341/thumbnail.jpg</thumbnail>
+      <title>League of Angels 3</title>
+   </game>
+   <game>
+      <developer>Goodgame Studios</developer>
+      <freetogame_profile_url>https://www.freetogame.com/empireww3</freetogame_profile_url>
+      <game_url>https://www.freetogame.com/open/empireww3</game_url>
+      <genre>Strategy</genre>
+      <id>460</id>
+      <platform>Web Browser</platform>
+      <publisher>Goodgame Studios</publisher>
+      <release_date>2018-06-28</release_date>
+      <short_description>A free-to-play browser-based action packed strategy game from the developer of Legends of Honor.</short_description>
+      <thumbnail>https://www.freetogame.com/g/460/thumbnail.jpg</thumbnail>
+      <title>Empire: World War 3</title>
+   </game>
+   <game>
+      <developer>Espirit Games</developer>
+      <freetogame_profile_url>https://www.freetogame.com/battle-arena-heroes-adventure</freetogame_profile_url>
+      <game_url>https://www.freetogame.com/open/battle-arena-heroes-adventure</game_url>
+      <genre>Strategy</genre>
+      <id>543</id>
+      <platform>Web Browser</platform>
+      <publisher>Espirit Games</publisher>
+      <release_date>2018-03-19</release_date>
+      <short_description>A MOBA with RPG elements.</short_description>
+      <thumbnail>https://www.freetogame.com/g/543/thumbnail.jpg</thumbnail>
+      <title>Battle Arena Heroes Adventure</title>
+   </game>
+   <game>
+      <developer>VivaGame</developer>
+      <freetogame_profile_url>https://www.freetogame.com/gods-origin</freetogame_profile_url>
+      <game_url>https://www.freetogame.com/open/gods-origin</game_url>
+      <genre>MMORPG</genre>
+      <id>354</id>
+      <platform>Web Browser</platform>
+      <publisher>VivaGame</publisher>
+      <release_date>2017-08-29</release_date>
+      <short_description>A free-to-play browser-based RPG from VivaGames in which players take on the role of human summoners that call deities from the Astral Realm back in time. </short_description>
+      <thumbnail>https://www.freetogame.com/g/354/thumbnail.jpg</thumbnail>
+      <title>Gods Origin Online</title>
+   </game>
+   <game>
+      <developer>AMZ Games</developer>
+      <freetogame_profile_url>https://www.freetogame.com/chronicles-of-eidola</freetogame_profile_url>
+      <game_url>https://www.freetogame.com/open/chronicles-of-eidola</game_url>
+      <genre>MMORPG</genre>
+      <id>355</id>
+      <platform>Web Browser</platform>
+      <publisher>AMZ Games</publisher>
+      <release_date>2017-04-10</release_date>
+      <short_description>A free-to-play 3D Browser RPG from AMZGame.</short_description>
+      <thumbnail>https://www.freetogame.com/g/355/thumbnail.jpg</thumbnail>
+      <title>Chronicles of Eidola</title>
+   </game>
+   <game>
+      <developer>Virtys</developer>
+      <freetogame_profile_url>https://www.freetogame.com/therian-saga</freetogame_profile_url>
+      <game_url>https://www.freetogame.com/open/therian-saga</game_url>
+      <genre>MMORPG</genre>
+      <id>421</id>
+      <platform>PC (Windows), Web Browser</platform>
+      <publisher>Gameforge</publisher>
+      <release_date>2017-03-27</release_date>
+      <short_description>A browser-based sandbox MMORPG with a complex crafting system.</short_description>
+      <thumbnail>https://www.freetogame.com/g/421/thumbnail.jpg</thumbnail>
+      <title>Therian Saga</title>
+   </game>
+   <game>
+      <developer>Game Hollywood</developer>
+      <freetogame_profile_url>https://www.freetogame.com/dragon-awaken</freetogame_profile_url>
+      <game_url>https://www.freetogame.com/open/dragon-awaken</game_url>
+      <genre>MMORPG</genre>
+      <id>343</id>
+      <platform>Web Browser</platform>
+      <publisher>Proficient city</publisher>
+      <release_date>2017-01-03</release_date>
+      <short_description>A free-to-play, browser-based fantasy RPG developed &#xD;
+by Game Hollywood and published by &#xD;
+Proficient City.</short_description>
+      <thumbnail>https://www.freetogame.com/g/343/thumbnail.jpg</thumbnail>
+      <title>Dragon Awaken</title>
+   </game>
+   <game>
+      <developer>Game Hollywood</developer>
+      <freetogame_profile_url>https://www.freetogame.com/omega-zodiac</freetogame_profile_url>
+      <game_url>https://www.freetogame.com/open/omega-zodiac</game_url>
+      <genre>MMORPG</genre>
+      <id>344</id>
+      <platform>Web Browser</platform>
+      <publisher>Proficient City</publisher>
+      <release_date>2016-08-25</release_date>
+      <short_description>A Greek and Norse mythology based free-to-play action MMO developed and published by Proficient City and Game Hollywood.</short_description>
+      <thumbnail>https://www.freetogame.com/g/344/thumbnail.jpg</thumbnail>
+      <title>Omega Zodiac</title>
+   </game>
+   <game>
+      <developer>Bandai Namco</developer>
+      <freetogame_profile_url>https://www.freetogame.com/naruto-online</freetogame_profile_url>
+      <game_url>https://www.freetogame.com/open/naruto-online</game_url>
+      <genre>MMORPG</genre>
+      <id>365</id>
+      <platform>Web Browser</platform>
+      <publisher>OAS Games</publisher>
+      <release_date>2016-07-20</release_date>
+      <short_description>A free-to-play MMO based on the popular anime series and manga, developed &#xD;
+by Bandai Namco Entertainment. </short_description>
+      <thumbnail>https://www.freetogame.com/g/365/thumbnail.jpg</thumbnail>
+      <title>Naruto Online</title>
+   </game>
+   <game>
+      <developer>Crunchy Games</developer>
+      <freetogame_profile_url>https://www.freetogame.com/starbreak</freetogame_profile_url>
+      <game_url>https://www.freetogame.com/open/starbreak</game_url>
+      <genre>MMORPG</genre>
+      <id>118</id>
+      <platform>PC (Windows), Web Browser</platform>
+      <publisher>Crunchy Games</publisher>
+      <release_date>2016-05-10</release_date>
+      <short_description>A Roguelike MMORPG with MetroidVania-style platformer &#xD;
+gameplay! Castlevania and Metroid fans will &#xD;
+love this game! </short_description>
+      <thumbnail>https://www.freetogame.com/g/118/thumbnail.jpg</thumbnail>
+      <title>Starbreak</title>
+   </game>
+   <game>
+      <developer>101XP</developer>
+      <freetogame_profile_url>https://www.freetogame.com/dragon-blood</freetogame_profile_url>
+      <game_url>https://www.freetogame.com/open/dragon-blood</game_url>
+      <genre>MMORPG</genre>
+      <id>370</id>
+      <platform>Web Browser</platform>
+      <publisher>101XP</publisher>
+      <release_date>2016-04-16</release_date>
+      <short_description>A free-to-play browser MMORPG from 101XP, you'll harness your unique power and the blood of dragons that flows through your veins! </short_description>
+      <thumbnail>https://www.freetogame.com/g/370/thumbnail.jpg</thumbnail>
+      <title>Dragon Blood</title>
+   </game>
+   <game>
+      <developer>GTArcade</developer>
+      <freetogame_profile_url>https://www.freetogame.com/league-angels-2</freetogame_profile_url>
+      <game_url>https://www.freetogame.com/open/league-angels-2</game_url>
+      <genre>MMORPG</genre>
+      <id>371</id>
+      <platform>Web Browser</platform>
+      <publisher>GTArcade</publisher>
+      <release_date>2016-04-06</release_date>
+      <short_description>A free to play browser MMORPG that captures all the beauty and elegance of its predecessor.</short_description>
+      <thumbnail>https://www.freetogame.com/g/371/thumbnail.jpg</thumbnail>
+      <title>League of Angels 2</title>
+   </game>
+   <game>
+      <developer>AMZgame</developer>
+      <freetogame_profile_url>https://www.freetogame.com/clash-of-avatars</freetogame_profile_url>
+      <game_url>https://www.freetogame.com/open/clash-of-avatars</game_url>
+      <genre>MMORPG</genre>
+      <id>374</id>
+      <platform>Web Browser</platform>
+      <publisher>AMZgame</publisher>
+      <release_date>2016-01-19</release_date>
+      <short_description>A free to play 3D browser MMORPG with powerful Avatars, 50 mounts, &#xD;
+and several loyal pets.</short_description>
+      <thumbnail>https://www.freetogame.com/g/374/thumbnail.jpg</thumbnail>
+      <title>Clash of Avatars</title>
+   </game>
+   <game>
+      <developer>JoyGames</developer>
+      <freetogame_profile_url>https://www.freetogame.com/one-piece-online-2</freetogame_profile_url>
+      <game_url>https://www.freetogame.com/open/one-piece-online-2</game_url>
+      <genre>MMORPG</genre>
+      <id>346</id>
+      <platform>Web Browser</platform>
+      <publisher>JoyGames</publisher>
+      <release_date>2015-09-25</release_date>
+      <short_description>A free-to-play, browser-based 2D MMORPG based on the immensely popular One Piece franchise.</short_description>
+      <thumbnail>https://www.freetogame.com/g/346/thumbnail.jpg</thumbnail>
+      <title>One Piece Online 2</title>
+   </game>
+   <game>
+      <developer>Goodgame Studios</developer>
+      <freetogame_profile_url>https://www.freetogame.com/legends-of-honor</freetogame_profile_url>
+      <game_url>https://www.freetogame.com/open/legends-of-honor</game_url>
+      <genre>Strategy</genre>
+      <id>383</id>
+      <platform>Web Browser</platform>
+      <publisher>Goodgame Empire</publisher>
+      <release_date>2015-08-20</release_date>
+      <short_description>A free to play browser based medieval fantasy 2D MMORTS.</short_description>
+      <thumbnail>https://www.freetogame.com/g/383/thumbnail.jpg</thumbnail>
+      <title>Legends of Honor</title>
+   </game>
+   <game>
+      <developer>37Games Entertainment</developer>
+      <freetogame_profile_url>https://www.freetogame.com/felspire</freetogame_profile_url>
+      <game_url>https://www.freetogame.com/open/felspire</game_url>
+      <genre>MMORPG</genre>
+      <id>384</id>
+      <platform>Web Browser</platform>
+      <publisher>37Games</publisher>
+      <release_date>2015-08-07</release_date>
+      <short_description>A free-to-play 2D browser-based fantasy MMORPG with plenty of dungeons and world bosses to slay.</short_description>
+      <thumbnail>https://www.freetogame.com/g/384/thumbnail.jpg</thumbnail>
+      <title>Felspire</title>
+   </game>
+   <game>
+      <developer>Jarbit</developer>
+      <freetogame_profile_url>https://www.freetogame.com/aberoth</freetogame_profile_url>
+      <game_url>https://www.freetogame.com/open/aberoth</game_url>
+      <genre> MMORPG</genre>
+      <id>386</id>
+      <platform>Web Browser</platform>
+      <publisher>Jarbit</publisher>
+      <release_date>2015-07-17</release_date>
+      <short_description>A free to play 8-bit MMORPG with retro graphics and MUD-like interface.</short_description>
+      <thumbnail>https://www.freetogame.com/g/386/thumbnail.jpg</thumbnail>
+      <title>Aberoth</title>
+   </game>
+   <game>
+      <developer>Blue Manchu</developer>
+      <freetogame_profile_url>https://www.freetogame.com/card-hunter</freetogame_profile_url>
+      <game_url>https://www.freetogame.com/open/card-hunter</game_url>
+      <genre>Card Game</genre>
+      <id>163</id>
+      <platform>PC (Windows), Web Browser</platform>
+      <publisher>Blue Manchu</publisher>
+      <release_date>2015-07-14</release_date>
+      <short_description>A free online collectible card game which blends together role-playing, card play and tactical combat. </short_description>
+      <thumbnail>https://www.freetogame.com/g/163/thumbnail.jpg</thumbnail>
+      <title>Card Hunter</title>
+   </game>
+   <game>
+      <developer>AMZGame</developer>
+      <freetogame_profile_url>https://www.freetogame.com/lords-road</freetogame_profile_url>
+      <game_url>https://www.freetogame.com/open/lords-road</game_url>
+      <genre>MMORPG</genre>
+      <id>388</id>
+      <platform>Web Browser</platform>
+      <publisher>AMZGame</publisher>
+      <release_date>2015-06-03</release_date>
+      <short_description>A free-to-play 2D browser-based fantasy MMORPG that features two playable classes.</short_description>
+      <thumbnail>https://www.freetogame.com/g/388/thumbnail.jpg</thumbnail>
+      <title>Lord’s Road</title>
+   </game>
+   <game>
+      <developer>Plarium</developer>
+      <freetogame_profile_url>https://www.freetogame.com/vikings-war-of-clans</freetogame_profile_url>
+      <game_url>https://www.freetogame.com/open/vikings-war-of-clans</game_url>
+      <genre>Strategy</genre>
+      <id>357</id>
+      <platform>Web Browser</platform>
+      <publisher>Plarium</publisher>
+      <release_date>2015-04-15</release_date>
+      <short_description>A free-to-play MMO strategy game developed and published by Plarium.</short_description>
+      <thumbnail>https://www.freetogame.com/g/357/thumbnail.jpg</thumbnail>
+      <title>Vikings: War Of Clans</title>
+   </game>
+   <game>
+      <developer>GameSamba</developer>
+      <freetogame_profile_url>https://www.freetogame.com/star-trek-alien-domain</freetogame_profile_url>
+      <game_url>https://www.freetogame.com/open/star-trek-alien-domain</game_url>
+      <genre>Strategy</genre>
+      <id>391</id>
+      <platform>Web Browser</platform>
+      <publisher>GameSamba</publisher>
+      <release_date>2015-04-07</release_date>
+      <short_description>A free to play browser based 2D strategy MMO set in the Stark Trek universe.</short_description>
+      <thumbnail>https://www.freetogame.com/g/391/thumbnail.jpg</thumbnail>
+      <title>Star Trek: Alien Domain</title>
+   </game>
+   <game>
+      <developer>Eiyland LLC</developer>
+      <freetogame_profile_url>https://www.freetogame.com/starcolony</freetogame_profile_url>
+      <game_url>https://www.freetogame.com/open/starcolony</game_url>
+      <genre>Strategy</genre>
+      <id>373</id>
+      <platform>Web Browser</platform>
+      <publisher>Eiyland LLC</publisher>
+      <release_date>2015-01-01</release_date>
+      <short_description>A free-to-play browser MMO strategy game that puts you in command of a rapidly growing city on a dangerous alien world.</short_description>
+      <thumbnail>https://www.freetogame.com/g/373/thumbnail.jpg</thumbnail>
+      <title>StarColony</title>
+   </game>
+   <game>
+      <developer>JoyGames</developer>
+      <freetogame_profile_url>https://www.freetogame.com/one-piece-online</freetogame_profile_url>
+      <game_url>https://www.freetogame.com/open/one-piece-online</game_url>
+      <genre>MMORPG</genre>
+      <id>394</id>
+      <platform>Web Browser</platform>
+      <publisher>JoyGames</publisher>
+      <release_date>2015-01-22</release_date>
+      <short_description>One Piece Online is a 2D Tower Defense Action MMO! </short_description>
+      <thumbnail>https://www.freetogame.com/g/394/thumbnail.jpg</thumbnail>
+      <title>One Piece Online</title>
+   </game>
+   <game>
+      <developer>Atelier 801</developer>
+      <freetogame_profile_url>https://www.freetogame.com/transformice</freetogame_profile_url>
+      <game_url>https://www.freetogame.com/open/transformice</game_url>
+      <genre>Fantasy</genre>
+      <id>179</id>
+      <platform>PC (Windows), Web Browser</platform>
+      <publisher>Atelier 801</publisher>
+      <release_date>2015-01-30</release_date>
+      <short_description>A cute little free-to-play MMO platformer.</short_description>
+      <thumbnail>https://www.freetogame.com/g/179/thumbnail.jpg</thumbnail>
+      <title>Transformice</title>
+   </game>
+   <game>
+      <developer>Archive Entertainment </developer>
+      <freetogame_profile_url>https://www.freetogame.com/8bitmmo</freetogame_profile_url>
+      <game_url>https://www.freetogame.com/open/8bitmmo</game_url>
+      <genre>MMORPG</genre>
+      <id>181</id>
+      <platform>PC (Windows), Web Browser</platform>
+      <publisher>Archive Entertainment </publisher>
+      <release_date>2015-01-26</release_date>
+      <short_description>A free to play retro­-style 2D MMO and a giant construction sandbox! </short_description>
+      <thumbnail>https://www.freetogame.com/g/181/thumbnail.jpg</thumbnail>
+      <title>8BitMMO</title>
+   </game>
+   <game>
+      <developer>37Games Entertainment</developer>
+      <freetogame_profile_url>https://www.freetogame.com/siegelord</freetogame_profile_url>
+      <game_url>https://www.freetogame.com/open/siegelord</game_url>
+      <genre>Strategy</genre>
+      <id>399</id>
+      <platform>Web Browser</platform>
+      <publisher>37Games Entertainment</publisher>
+      <release_date>2014-12-19</release_date>
+      <short_description>A free to play 2D medieval fantasy browser-based MMORTS.</short_description>
+      <thumbnail>https://www.freetogame.com/g/399/thumbnail.jpg</thumbnail>
+      <title>Siegelord</title>
+   </game>
+   <game>
+      <developer>Hunted Cow Studios</developer>
+      <freetogame_profile_url>https://www.freetogame.com/eldevin</freetogame_profile_url>
+      <game_url>https://www.freetogame.com/open/eldevin</game_url>
+      <genre>MMORPG</genre>
+      <id>185</id>
+      <platform>PC (Windows), Web Browser</platform>
+      <publisher>Hunted Cow Studios</publisher>
+      <release_date>2014-11-05</release_date>
+      <short_description>A indie story-driven Free to Play MMORPG.</short_description>
+      <thumbnail>https://www.freetogame.com/g/185/thumbnail.jpg</thumbnail>
+      <title>Eldevin</title>
+   </game>
+   <game>
+      <developer>InnoGames</developer>
+      <freetogame_profile_url>https://www.freetogame.com/tribal-wars-2</freetogame_profile_url>
+      <game_url>https://www.freetogame.com/open/tribal-wars-2</game_url>
+      <genre>Strategy</genre>
+      <id>404</id>
+      <platform>Web Browser</platform>
+      <publisher>InnoGames</publisher>
+      <release_date>2014-09-02</release_date>
+      <short_description>The sequel to the classic city-building strategy game Tribal Wars! </short_description>
+      <thumbnail>https://www.freetogame.com/g/404/thumbnail.jpg</thumbnail>
+      <title>Tribal Wars 2</title>
+   </game>
+   <game>
+      <developer>GoGames</developer>
+      <freetogame_profile_url>https://www.freetogame.com/bleach-online</freetogame_profile_url>
+      <game_url>https://www.freetogame.com/open/bleach-online</game_url>
+      <genre>MMORPG</genre>
+      <id>348</id>
+      <platform>Web Browser</platform>
+      <publisher>GoGames</publisher>
+      <release_date>2014-07-14</release_date>
+      <short_description>A free to play 2D browser based MMORPG based on Bleach, the popular manga and anime series.</short_description>
+      <thumbnail>https://www.freetogame.com/g/348/thumbnail.jpg</thumbnail>
+      <title>Bleach Online</title>
+   </game>
+   <game>
+      <developer>Spyr</developer>
+      <freetogame_profile_url>https://www.freetogame.com/pocket-starships</freetogame_profile_url>
+      <game_url>https://www.freetogame.com/open/pocket-starships</game_url>
+      <genre>Strategy</genre>
+      <id>405</id>
+      <platform>Web Browser</platform>
+      <publisher>Spyr</publisher>
+      <release_date>2014-03-00</release_date>
+      <short_description>A free-to-play cross-platform space combat MMO from SPYR games.</short_description>
+      <thumbnail>https://www.freetogame.com/g/405/thumbnail.jpg</thumbnail>
+      <title>Pocket Starships</title>
+   </game>
+   <game>
+      <developer>Plarium</developer>
+      <freetogame_profile_url>https://www.freetogame.com/sparta-war-empires</freetogame_profile_url>
+      <game_url>https://www.freetogame.com/open/sparta-war-empires</game_url>
+      <genre>Strategy</genre>
+      <id>409</id>
+      <platform>Web Browser</platform>
+      <publisher>Plarium</publisher>
+      <release_date>2014-03-13</release_date>
+      <short_description>A 2D browser-based MMORTS in which players must exercise their city-management skills to construct and upgrade different structures and troops.</short_description>
+      <thumbnail>https://www.freetogame.com/g/409/thumbnail.jpg</thumbnail>
+      <title>Sparta: War of Empires</title>
+   </game>
+   <game>
+      <developer>Youzu Interactive</developer>
+      <freetogame_profile_url>https://www.freetogame.com/league-of-angels</freetogame_profile_url>
+      <game_url>https://www.freetogame.com/open/league-of-angels</game_url>
+      <genre>MMORPG</genre>
+      <id>376</id>
+      <platform>Web Browser</platform>
+      <publisher>GTArcade</publisher>
+      <release_date>2013-12-10</release_date>
+      <short_description>A free to play 2D browser-based fantasy MMORPG with turn-based combat.</short_description>
+      <thumbnail>https://www.freetogame.com/g/376/thumbnail.jpg</thumbnail>
+      <title>League of Angels</title>
+   </game>
+   <game>
+      <developer>R2Games</developer>
+      <freetogame_profile_url>https://www.freetogame.com/crystal-saga</freetogame_profile_url>
+      <game_url>https://www.freetogame.com/open/crystal-saga</game_url>
+      <genre>MMORPG</genre>
+      <id>424</id>
+      <platform>Web Browser</platform>
+      <publisher>Aeria, R2Games</publisher>
+      <release_date>2013-11-20</release_date>
+      <short_description>A free to play 2D browser-based MMORPG that allows players to explore the land of Vidalia.</short_description>
+      <thumbnail>https://www.freetogame.com/g/424/thumbnail.jpg</thumbnail>
+      <title>Crystal Saga</title>
+   </game>
+   <game>
+      <developer>Plarium Games</developer>
+      <freetogame_profile_url>https://www.freetogame.com/soldiers-inc</freetogame_profile_url>
+      <game_url>https://www.freetogame.com/open/soldiers-inc</game_url>
+      <genre>Strategy</genre>
+      <id>411</id>
+      <platform>Web Browser</platform>
+      <publisher>Plarium Games</publisher>
+      <release_date>2013-08-01</release_date>
+      <short_description>A free to play 2D top-down browser based MMORTS game.</short_description>
+      <thumbnail>https://www.freetogame.com/g/411/thumbnail.jpg</thumbnail>
+      <title>Soldiers Inc.</title>
+   </game>
+   <game>
+      <developer>Plarium Games</developer>
+      <freetogame_profile_url>https://www.freetogame.com/nords-heroes-north</freetogame_profile_url>
+      <game_url>https://www.freetogame.com/open/nords-heroes-north</game_url>
+      <genre>Strategy</genre>
+      <id>412</id>
+      <platform>Web Browser</platform>
+      <publisher>Plarium Games</publisher>
+      <release_date>2013-08-01</release_date>
+      <short_description>A free to play browser-based 2D strategy MMO game with Elves, Orcs, Dragons and more.</short_description>
+      <thumbnail>https://www.freetogame.com/g/412/thumbnail.jpg</thumbnail>
+      <title>Nords: Heroes of the North</title>
+   </game>
+   <game>
+      <developer>Travian Games</developer>
+      <freetogame_profile_url>https://www.freetogame.com/rail-nation</freetogame_profile_url>
+      <game_url>https://www.freetogame.com/open/rail-nation</game_url>
+      <genre>Strategy</genre>
+      <id>414</id>
+      <platform>Web Browser</platform>
+      <publisher>Bright Future</publisher>
+      <release_date>2013-01-13</release_date>
+      <short_description>A free to play 2D browser-based train simulation strategy MMO game.</short_description>
+      <thumbnail>https://www.freetogame.com/g/414/thumbnail.jpg</thumbnail>
+      <title>Rail Nation</title>
+   </game>
+   <game>
+      <developer>Plarium</developer>
+      <freetogame_profile_url>https://www.freetogame.com/stormfall-age-war</freetogame_profile_url>
+      <game_url>https://www.freetogame.com/open/stormfall-age-war</game_url>
+      <genre>Strategy</genre>
+      <id>415</id>
+      <platform>Web Browser</platform>
+      <publisher>Plarium</publisher>
+      <release_date>2012-11-01</release_date>
+      <short_description>A free to play 2D top-down browser MMORTS featuring castle building, resource management and PvP battles.</short_description>
+      <thumbnail>https://www.freetogame.com/g/415/thumbnail.jpg</thumbnail>
+      <title>Stormfall: Age of War</title>
+   </game>
+   <game>
+      <developer>GoodGame Studios</developer>
+      <freetogame_profile_url>https://www.freetogame.com/big-farm</freetogame_profile_url>
+      <game_url>https://www.freetogame.com/open/big-farm</game_url>
+      <genre>Strategy</genre>
+      <id>349</id>
+      <platform>Web Browser</platform>
+      <publisher>GoodGame Studios</publisher>
+      <release_date>2012-10-29</release_date>
+      <short_description>A friendly browser-based farming simulation MMO game!</short_description>
+      <thumbnail>https://www.freetogame.com/g/349/thumbnail.jpg</thumbnail>
+      <title>Big Farm</title>
+   </game>
+   <game>
+      <developer>7Th Road</developer>
+      <freetogame_profile_url>https://www.freetogame.com/wartune</freetogame_profile_url>
+      <game_url>https://www.freetogame.com/open/wartune</game_url>
+      <genre>MMORPG</genre>
+      <id>416</id>
+      <platform>Web Browser</platform>
+      <publisher>R2 Games</publisher>
+      <release_date>2012-10-25</release_date>
+      <short_description>A 2D browser-based Strategy MMORPG with classic turn based RPG features.</short_description>
+      <thumbnail>https://www.freetogame.com/g/416/thumbnail.jpg</thumbnail>
+      <title>Wartune</title>
+   </game>
+   <game>
+      <developer>Splits. S</developer>
+      <freetogame_profile_url>https://www.freetogame.com/dino-storm</freetogame_profile_url>
+      <game_url>https://www.freetogame.com/open/dino-storm</game_url>
+      <genre>MMORPG</genre>
+      <id>417</id>
+      <platform>Web Browser</platform>
+      <publisher>Splitscreen S.</publisher>
+      <release_date>2012-09-12</release_date>
+      <short_description>A free-to-play 3D MMO with cowboys, dinosaurs, and laser guns.</short_description>
+      <thumbnail>https://www.freetogame.com/g/417/thumbnail.jpg</thumbnail>
+      <title>Dino Storm</title>
+   </game>
+   <game>
+      <developer>Blue Byte</developer>
+      <freetogame_profile_url>https://www.freetogame.com/the-settlers-online</freetogame_profile_url>
+      <game_url>https://www.freetogame.com/open/the-settlers-online</game_url>
+      <genre>Strategy</genre>
+      <id>418</id>
+      <platform>Web Browser</platform>
+      <publisher>Ubisoft</publisher>
+      <release_date>2012-09-11</release_date>
+      <short_description>A free to play city building MMORTS based on the popular Settlers series.</short_description>
+      <thumbnail>https://www.freetogame.com/g/418/thumbnail.jpg</thumbnail>
+      <title>The Settlers Online</title>
+   </game>
+   <game>
+      <developer>Marxnet</developer>
+      <freetogame_profile_url>https://www.freetogame.com/rpg-mo</freetogame_profile_url>
+      <game_url>https://www.freetogame.com/open/rpg-mo</game_url>
+      <genre>MMORPG</genre>
+      <id>249</id>
+      <platform>PC (Windows), Web Browser</platform>
+      <publisher>Marxnet</publisher>
+      <release_date>2012-07-18</release_date>
+      <short_description>A nostalgic free MMORPG reminiscent of old-school RPG's like Ultima and Runescape.</short_description>
+      <thumbnail>https://www.freetogame.com/g/249/thumbnail.jpg</thumbnail>
+      <title>RPG MO</title>
+   </game>
+   <game>
+      <developer>Wild Shadow Studios</developer>
+      <freetogame_profile_url>https://www.freetogame.com/realm-mad-god</freetogame_profile_url>
+      <game_url>https://www.freetogame.com/open/realm-mad-god</game_url>
+      <genre>MMORPG</genre>
+      <id>256</id>
+      <platform>PC (Windows), Web Browser</platform>
+      <publisher>Kabam</publisher>
+      <release_date>2012-02-21</release_date>
+      <short_description>A fast paced 2d free to play MMO shooter game with a retro 8-bit style.</short_description>
+      <thumbnail>https://www.freetogame.com/g/256/thumbnail.jpg</thumbnail>
+      <title>Realm of the Mad God</title>
+   </game>
+   <game>
+      <developer>Plarium Games</developer>
+      <freetogame_profile_url>https://www.freetogame.com/pirates-tides-fortune</freetogame_profile_url>
+      <game_url>https://www.freetogame.com/open/pirates-tides-fortune</game_url>
+      <genre>Strategy</genre>
+      <id>422</id>
+      <platform>Web Browser</platform>
+      <publisher>Plarium Games</publisher>
+      <release_date>2012-02-12</release_date>
+      <short_description>A free to play browser-based 2D MMORTS for people who are fans of pirates!</short_description>
+      <thumbnail>https://www.freetogame.com/g/422/thumbnail.jpg</thumbnail>
+      <title>Pirates: Tides of Fortune</title>
+   </game>
+   <game>
+      <developer>Splitscreen Studios</developer>
+      <freetogame_profile_url>https://www.freetogame.com/steel-legions</freetogame_profile_url>
+      <game_url>https://www.freetogame.com/open/steel-legions</game_url>
+      <genre>Shooter</genre>
+      <id>423</id>
+      <platform>Web Browser</platform>
+      <publisher>Splitscreen Studios</publisher>
+      <release_date>2011-06-15</release_date>
+      <short_description>A free to play 3d browser based tank game with fast-paced tactical battles! </short_description>
+      <thumbnail>https://www.freetogame.com/g/423/thumbnail.jpg</thumbnail>
+      <title>Steel Legions</title>
+   </game>
+   <game>
+      <developer>InnoGames</developer>
+      <freetogame_profile_url>https://www.freetogame.com/grepolis</freetogame_profile_url>
+      <game_url>https://www.freetogame.com/open/grepolis</game_url>
+      <genre>Strategy</genre>
+      <id>425</id>
+      <platform>Web Browser</platform>
+      <publisher>InnoGames</publisher>
+      <release_date>2009-12-08</release_date>
+      <short_description>A free to play browser-based strategy MMORTS set in Ancient Greece.</short_description>
+      <thumbnail>https://www.freetogame.com/g/425/thumbnail.jpg</thumbnail>
+      <title>Grepolis</title>
+   </game>
+   <game>
+      <developer>Artix Entertainment</developer>
+      <freetogame_profile_url>https://www.freetogame.com/adventurequest-worlds</freetogame_profile_url>
+      <game_url>https://www.freetogame.com/open/adventurequest-worlds</game_url>
+      <genre>MMORPG</genre>
+      <id>426</id>
+      <platform>Web Browser</platform>
+      <publisher>Artix Entertainment</publisher>
+      <release_date>2008-10-10</release_date>
+      <short_description>A free-to-play 2D fantasy browser MMORPG. There are no downloads or software to install! </short_description>
+      <thumbnail>https://www.freetogame.com/g/426/thumbnail.jpg</thumbnail>
+      <title>AdventureQuest Worlds</title>
+   </game>
+   <game>
+      <developer>GameForge</developer>
+      <freetogame_profile_url>https://www.freetogame.com/ikariam</freetogame_profile_url>
+      <game_url>https://www.freetogame.com/open/ikariam</game_url>
+      <genre>Strategy</genre>
+      <id>428</id>
+      <platform>Web Browser</platform>
+      <publisher>GameForge</publisher>
+      <release_date>2008-03-31</release_date>
+      <short_description>A free to play browser-based city-building strategy game by GameForge.</short_description>
+      <thumbnail>https://www.freetogame.com/g/428/thumbnail.jpg</thumbnail>
+      <title>Ikariam</title>
+   </game>
+   <game>
+      <developer>GPRO.net</developer>
+      <freetogame_profile_url>https://www.freetogame.com/gpro</freetogame_profile_url>
+      <game_url>https://www.freetogame.com/open/gpro</game_url>
+      <genre>Strategy</genre>
+      <id>351</id>
+      <platform>Web Browser</platform>
+      <publisher>GPRO.net</publisher>
+      <release_date>2006-08-01</release_date>
+      <short_description>A free-to-play web-based motorsport management game.</short_description>
+      <thumbnail>https://www.freetogame.com/g/351/thumbnail.jpg</thumbnail>
+      <title>Grand Prix Racing Online</title>
+   </game>
+   <game>
+      <developer>Cybertopia</developer>
+      <freetogame_profile_url>https://www.freetogame.com/astro-empires</freetogame_profile_url>
+      <game_url>https://www.freetogame.com/open/astro-empires</game_url>
+      <genre>Strategy</genre>
+      <id>429</id>
+      <platform>Web Browser</platform>
+      <publisher>Cybertopia</publisher>
+      <release_date>2006-05-20</release_date>
+      <short_description>A text-based sci-fi strategy and diplomacy MMO Game in a persistent universe.</short_description>
+      <thumbnail>https://www.freetogame.com/g/429/thumbnail.jpg</thumbnail>
+      <title>Astro Empires</title>
+   </game>
+   <game>
+      <developer>Acute Mobile</developer>
+      <freetogame_profile_url>https://www.freetogame.com/urban-rivals</freetogame_profile_url>
+      <game_url>https://www.freetogame.com/open/urban-rivals</game_url>
+      <genre>Card Game</genre>
+      <id>430</id>
+      <platform>Web Browser</platform>
+      <publisher>Boostr </publisher>
+      <release_date>2006-01-17</release_date>
+      <short_description>A free to play browser based card-game with a high player base and comic-book inspired world!</short_description>
+      <thumbnail>https://www.freetogame.com/g/430/thumbnail.jpg</thumbnail>
+      <title>Urban Rivals</title>
+   </game>
+   <game>
+      <developer>Imperia Online Ltd.</developer>
+      <freetogame_profile_url>https://www.freetogame.com/imperia-online</freetogame_profile_url>
+      <game_url>https://www.freetogame.com/open/imperia-online</game_url>
+      <genre>Strategy</genre>
+      <id>431</id>
+      <platform>Web Browser</platform>
+      <publisher>Imperia Online Ltd.</publisher>
+      <release_date>2005-08-23</release_date>
+      <short_description>A 2D free-to-play browser-based Medieval MMORTS, Train soldiers and raise an Empire.</short_description>
+      <thumbnail>https://www.freetogame.com/g/431/thumbnail.jpg</thumbnail>
+      <title>Imperia Online</title>
+   </game>
+   <game>
+      <developer>Travian Games</developer>
+      <freetogame_profile_url>https://www.freetogame.com/travian</freetogame_profile_url>
+      <game_url>https://www.freetogame.com/open/travian</game_url>
+      <genre>Strategy</genre>
+      <id>352</id>
+      <platform>Web Browser</platform>
+      <publisher>Travian Games</publisher>
+      <release_date>2004-09-05</release_date>
+      <short_description>A popular browser-based multiplayer online strategy &#xD;
+game.</short_description>
+      <thumbnail>https://www.freetogame.com/g/352/thumbnail.jpg</thumbnail>
+      <title>Travian</title>
+   </game>
+   <game>
+      <developer>Sulake Corporation</developer>
+      <freetogame_profile_url>https://www.freetogame.com/habbo</freetogame_profile_url>
+      <game_url>https://www.freetogame.com/open/habbo</game_url>
+      <genre>Social</genre>
+      <id>432</id>
+      <platform>Web Browser</platform>
+      <publisher>Sulake Corporation</publisher>
+      <release_date>2001-09-26</release_date>
+      <short_description>One of the largest and most popular Social MMO.</short_description>
+      <thumbnail>https://www.freetogame.com/g/432/thumbnail.jpg</thumbnail>
+      <title>Habbo</title>
+   </game>
+</games>

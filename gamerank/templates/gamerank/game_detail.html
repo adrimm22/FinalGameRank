@@ -1,0 +1,89 @@
+{% extends "gamerank/base.html" %}
+
+{% block content %}
+<h2 class="section-title mt-4">{{ game.title }}</h2>
+
+{% if user.is_authenticated %}
+    <form method="POST" class="mb-4">
+        {% csrf_token %}
+        {% if user_follow %}
+            <button type="submit" name="unfollow" class="btn btn-outline-danger btn-sm">Unfollow</button>
+        {% else %}
+            <button type="submit" name="follow" class="btn btn-outline-success btn-sm">Follow</button>
+        {% endif %}
+    </form>
+{% endif %}
+
+<div class="row mb-5">
+    <div class="col-md-8">
+        <p><strong>Genre:</strong> {{ game.genre }}</p>
+        <p><strong>Platform:</strong> {{ game.platform }}</p>
+        <p><strong>Developer:</strong> {{ game.developer }}</p>
+        <p><strong>Publisher:</strong> {{ game.publisher }}</p>
+        <p><strong>Release Date:</strong> {{ game.release_date }}</p>
+        <p><strong>Description:</strong> {{ game.short_description }}</p>
+        {% if game.game_url %}
+            <a href="{{ game.game_url }}" target="_blank" class="btn btn-primary">Play</a>
+        {% endif %}
+    </div>
+    <div class="col-md-4">
+        {% if game.thumbnail %}
+            <img src="{{ game.thumbnail }}" class="img-fluid rounded" alt="{{ game.title }}">
+        {% endif %}
+    </div>
+</div>
+
+<h3 class="mt-5">Your Rating</h3>
+{% if user.is_authenticated %}
+    {% if user_rating %}
+        <p>
+            You have rated this game with:
+            {% include "gamerank/includes/stars.html" with score=user_rating.vote %}
+            <small>({{ user_rating.vote }}/5)</small>
+        </p>
+
+    {% else %}
+        <form method="POST" class="mb-4">
+            {% csrf_token %}
+            <label for="voteSelect" class="form-label">Select a score:</label>
+            <select id="voteSelect" name="vote" class="form-select w-auto d-inline-block" required>
+                <option value="">-- Choose --</option>
+                {% for n in rating_range %}
+                    <option value="{{ n }}">{{ n }}</option>
+                {% endfor %}
+            </select>
+            <button type="submit" class="btn btn-sm btn-success">Rate</button>
+        </form>
+    {% endif %}
+{% else %}
+    <p><a href="{% url 'login' %}">Log in</a> to rate this game.</p>
+{% endif %}
+
+<hr class="my-4">
+
+{% if user.is_authenticated %}
+    <form method="POST" class="mt-4">
+        {% csrf_token %}
+        <div class="mb-3">
+            <label for="textoComentario" class="form-label">Write your comment:</label>
+            <textarea name="comment_text" id="textoComentario" class="form-control" rows="3" required></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Post comment</button>
+    </form>
+{% else %}
+    <p><a href="{% url 'login' %}">Log in</a> to comment on this game.</p>
+{% endif %}
+
+<hr class="my-4">
+
+<h3>Comments</h3>
+{% include "gamerank/includes/comments_htmx.html" %}
+
+<a href="{% url 'home' %}" class="btn btn-secondary mt-4">← Back</a>
+
+<div class="mt-3">
+    <a href="{% url 'game_detail_htmx' game.game_id %}" class="btn btn-outline-secondary btn-sm">
+        View in dynamic mode (HTMX)
+    </a>
+</div>
+{% endblock %}
