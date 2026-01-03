@@ -390,8 +390,8 @@ def unified_games_api(request):
                     print(f"❌ Error reading {backup_filename}:", e)
                     return []
 
-        games_freetogame = get_games("https://www.freetogame.com/api/games", "games_freetogame_backup.json")
-        games_mmobomb = get_games("https://www.mmobomb.com/api1/games", "games_mmobomb_backup.json")
+        games_freetogame = get_games("https://www.freetogame.com/api/games", "freetogame_games_backup.json")
+        games_mmobomb = get_games("https://www.mmobomb.com/api1/games", "mmobomb_games_backup.json")
 
         for game in games_freetogame + games_mmobomb:
             title = game.get("title", "").strip().lower()

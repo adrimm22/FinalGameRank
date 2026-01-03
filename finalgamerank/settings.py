@@ -74,7 +74,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = "gamerankproject.wsgi.application"
+WSGI_APPLICATION = "finalgamerank.wsgi.application"
 
 
 # Database

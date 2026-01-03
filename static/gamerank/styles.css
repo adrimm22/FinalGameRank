@@ -1,0 +1,197 @@
+/* ======================================
+   1. CUSTOMIZABLE TYPOGRAPHY
+   ====================================== */
+
+/* Font Families */
+.font-sans-serif {
+    font-family: 'Rubik', 'Segoe UI', sans-serif;
+}
+
+.font-serif {
+    font-family: 'Roboto Slab', 'Georgia', serif;
+}
+
+.font-monospace {
+    font-family: 'Fira Code', 'Courier New', monospace;
+}
+
+.font-decorative {
+    font-family: 'Pacifico', cursive;
+}
+
+/* Text Sizes */
+.text-small { font-size: 13px; }
+.text-medium { font-size: 16px; }
+.text-large { font-size: 20px; }
+.text-xl { font-size: 24px; }
+
+/* ======================================
+   2. GENERAL STRUCTURE
+   ====================================== */
+
+body {
+    background-color: #f8f9fa;
+    color: #222;
+}
+
+.section-title {
+    font-size: 1.75rem;
+    color: #343a40;
+    text-align: center;
+    border-bottom: 2px solid #dee2e6;
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    padding-bottom: 0.5rem;
+}
+
+section {
+    margin-top: 3rem;
+    margin-bottom: 2rem;
+}
+
+.card {
+    transition: transform 0.2s ease-in-out;
+}
+
+.card:hover {
+    transform: scale(1.01);
+}
+
+/* ======================================
+   3. HEADER AND NAV
+   ====================================== */
+
+.gamerank-title {
+    font-family: 'Anton', sans-serif;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 5px rgba(0,0,0,0.6);
+}
+
+.main-header {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    min-height: 220px;
+    margin-bottom: 0;
+    padding: 0;
+}
+
+.dark-overlay {
+    background-color: rgba(0, 0, 0, 0.6);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem 1rem;
+}
+
+.site-title {
+    text-shadow: 2px 2px 6px rgba(0,0,0,0.6);
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+}
+
+.main-header .lead {
+    font-weight: 300;
+    font-size: 1.2rem;
+    color: #e0e0e0;
+    margin: 0;
+}
+
+.navbar {
+    font-weight: 500;
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    background: rgba(20, 20, 20, 0.95);
+    backdrop-filter: blur(4px);
+    border-bottom: 1px solid #333;
+}
+
+.navbar-nav .nav-link {
+    color: #ccc !important;
+    transition: all 0.2s ease-in-out;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #fff !important;
+    text-shadow: 0 0 4px rgba(255,255,255,0.6);
+}
+
+.navbar-nav .nav-link.active {
+    color: #fff !important;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.navbar .btn-outline-light,
+.navbar .btn-outline-danger {
+    transition: all 0.2s ease-in-out;
+}
+
+.navbar .btn-outline-light:hover {
+    background-color: #fff;
+    color: #000;
+}
+
+.navbar .btn-outline-danger:hover {
+    background-color: #dc3545;
+    color: #fff;
+}
+
+/* ======================================
+   4. BUTTONS
+   ====================================== */
+
+.btn-outline-success,
+.btn-outline-danger {
+    min-width: 110px;
+    text-align: center;
+}
+
+.d-grid {
+    display: grid;
+}
+
+.d-grid button {
+    width: 100%;
+}
+
+/* ======================================
+   5. FOOTER
+   ====================================== */
+
+footer {
+    font-size: 0.85rem;
+    color: #888;
+    border-top: 1px solid #ddd;
+    padding-top: 1rem;
+    margin-top: 3rem;
+}
+
+/* ======================================
+   6. COMMENTS
+   ====================================== */
+
+.comment-box {
+    border-left: 4px solid #ccc;
+    padding-left: 1rem;
+    margin-bottom: 1rem;
+}
+
+ul li {
+    margin-bottom: 0.5rem;
+}
+
+/* ======================================
+   7. EXTRAS
+   ====================================== */
+.fa-star {
+    vertical-align: middle;
+}

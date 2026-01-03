@@ -5,19 +5,24 @@
     <meta charset="UTF-8">
     <title>GameRank</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+
     <link rel="icon" href="{% static 'gamerank/favicon.ico' %}" type="image/x-icon">
+
     <link rel="stylesheet" href="{% static 'bootstrap/css/bootstrap.min.css' %}">
     <link rel="stylesheet" href="{% static 'fontawesome/css/all.min.css' %}">
+
     <link href="https://fonts.googleapis.com/css2?family=Fira+Code&family=Pacifico&family=Roboto+Slab&family=Rubik&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="{% static 'gamerank/estilos.css' %}">
+
+    <link rel="stylesheet" href="{% static 'gamerank/styles.css' %}">
+
     <script src="https://unpkg.com/htmx.org@1.9.10"></script>
 </head>
 
-<body class="{{ user_config.font_type }} {{ user_config.text_size }}">
+<body class="{{ user_settings.font_type }} {{ user_settings.text_size }}">
 
 {% with background_url='gamerank/fondo1.png' %}
 <header class="main-header text-white" style="background-image: url('{% static background_url %}');">
-    <div class="overlay-dark">
+    <div class="dark-overlay">
         <div class="container text-center py-5">
             <h1 class="site-title display-3 fw-bold mb-1">
                 <a href="{% url 'home' %}" class="text-white text-decoration-none gamerank-title">🎮 GameRank</a>
@@ -33,6 +38,7 @@
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent">
             <span class="navbar-toggler-icon"></span>
         </button>
+
         <div class="collapse navbar-collapse justify-content-between" id="navbarContent">
             <ul class="navbar-nav mb-2 mb-lg-0 gap-2">
                 {% if request.resolver_match.url_name != 'home' %}
@@ -40,7 +46,7 @@
                 {% endif %}
 
                 {% if request.resolver_match.url_name != 'games_api' %}
-                    <li class="nav-item"><a class="nav-link" href="{% url 'games_api' %}">External Games</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{% url 'games_api' %}">API Games</a></li>
                 {% endif %}
 
                 {% if user.is_authenticated %}
@@ -53,7 +59,7 @@
                     {% endif %}
 
                     {% if request.resolver_match.url_name != 'followed_games' %}
-                        <li class="nav-item"><a class="nav-link" href="{% url 'followed_games' %}">Watchlist</a></li>
+                        <li class="nav-item"><a class="nav-link" href="{% url 'followed_games' %}">Followed Games</a></li>
                     {% endif %}
 
                     {% if request.resolver_match.url_name != 'settings_page' %}
@@ -85,12 +91,6 @@
 </nav>
 
 <main class="container mb-5">
-    {% if messages %}
-        {% for message in messages %}
-            <div class="alert alert-{{ message.tags }} mt-3">{{ message }}</div>
-        {% endfor %}
-    {% endif %}
-
     {% block content %}{% endblock %}
 </main>
 
@@ -99,8 +99,8 @@
         Games: {{ total_games }} |
         Comments: {{ total_comments }} |
         {% if user.is_authenticated %}
-            Your Votes: {{ user_votes }} |
-            Your Comments: {{ user_comments }}
+            Rated by user: {{ user_ratings_count }} |
+            User comments: {{ user_comments_count }}
         {% endif %}
     </p>
 </footer>

@@ -1,16 +1,19 @@
 {% extends "gamerank/base.html" %}
 
 {% block content %}
+
 <h2 class="section-title mt-4">Top Rated Games</h2>
 
 <form method="POST">
     {% csrf_token %}
+
     <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
         {% for game in games %}
         <div class="col">
             <div class="card h-100 shadow-sm border-0">
+
                 {% if game.thumbnail %}
-                    <img src="{{ game.thumbnail }}" class="card-img-top rounded-top" alt="{{ game.title }}">
+                    <img src="{{ game.thumbnail }}" class="card-img-top rounded-top" alt="Image of {{ game.title }}">
                 {% endif %}
 
                 <div class="card-body">
@@ -21,18 +24,19 @@
                     <p class="card-text mb-1">
                         <strong>Rating:</strong>
                         {% if game.average_rating %}
-                            <i class="fas fa-star text-warning"></i> {{ game.average_rating }}
-                            <span class="ms-2 text-muted small">(/5)</span>
+                            {% include "gamerank/includes/stars.html" with rating=game.average_rating %}
+                            <span class="ms-2 text-muted small">({{ game.average_rating|floatformat:1 }}/5)</span>
                         {% else %}
                             <span class="text-muted">N/A</span>
                         {% endif %}
                     </p>
+
                     <p class="card-text"><strong>Votes:</strong> {{ game.total_votes }}</p>
                 </div>
 
                 <div class="card-footer bg-white border-0 d-flex justify-content-between align-items-center">
                     <a href="{% url 'game_detail' game.game_id %}" class="btn btn-sm btn-outline-primary">
-                        Details
+                        View details
                     </a>
 
                     {% if user.is_authenticated %}
@@ -52,4 +56,5 @@
         {% endfor %}
     </div>
 </form>
+
 {% endblock %}
