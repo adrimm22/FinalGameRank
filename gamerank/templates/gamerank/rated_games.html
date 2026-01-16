@@ -8,54 +8,7 @@
     {% if games %}
     <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
         {% for game in games %}
-        <div class="col">
-            <div class="card h-100 shadow-sm border-0">
-
-                {% if game.thumbnail %}
-                    <img src="{{ game.thumbnail }}" class="card-img-top" alt="Image of {{ game.title }}">
-                {% endif %}
-
-                <div class="card-body">
-                    <h5 class="card-title text-primary">{{ game.title }}</h5>
-                    <p class="card-text mb-1"><strong>Genre:</strong> {{ game.genre }}</p>
-                    <p class="card-text mb-1"><strong>Platform:</strong> {{ game.platform }}</p>
-
-                    <p class="card-text mb-1">
-                        <strong>Rating:</strong>
-                        {% if game.score %}
-                            {% include "gamerank/includes/stars.html" with score=game.score %}
-                            <span class="ms-2 text-muted small">({{ game.score|floatformat:1 }}/5)</span>
-                        {% else %}
-                            <span class="text-muted">N/A</span>
-                        {% endif %}
-                    </p>
-
-                    <p class="card-text"><strong>Votes:</strong> {{ game.total_votes }}</p>
-
-                    <p class="card-text"><strong>Your rating:</strong> {{ game.my_vote }}/5</p>
-                </div>
-
-                <div class="card-footer bg-white border-0 text-center">
-                    {% if user.is_authenticated %}
-                    <form method="POST">
-                        {% csrf_token %}
-                        {% if game.game_id in followed_ids %}
-                            <button type="submit" name="Unfollow_{{ game.game_id }}" class="btn btn-sm btn-outline-danger me-2">
-                                Unfollow
-                            </button>
-                        {% else %}
-                            <button type="submit" name="Follow_{{ game.game_id }}" class="btn btn-sm btn-outline-success me-2">
-                                Follow
-                            </button>
-                        {% endif %}
-                    </form>
-                    {% endif %}
-                    <a href="{% url 'game_detail' game.game_id %}" class="btn btn-sm btn-outline-primary mt-2">
-                        View Details
-                    </a>
-                </div>
-            </div>
-        </div>
+            {% include "gamerank/includes/game_card.html" with game=game user=user %}
         {% endfor %}
     </div>
     {% else %}

@@ -41,34 +41,34 @@
 
         <div class="collapse navbar-collapse justify-content-between" id="navbarContent">
             <ul class="navbar-nav mb-2 mb-lg-0 gap-2">
-                {% if request.resolver_match.url_name != 'home' %}
-                    <li class="nav-item"><a class="nav-link" href="{% url 'home' %}">Home</a></li>
-                {% endif %}
+                <li class="nav-item">
+                    <a class="nav-link {% if request.resolver_match.url_name == 'home' %}active{% endif %}" href="{% url 'home' %}">Home</a>
+                </li>
 
-                {% if request.resolver_match.url_name != 'games_api' %}
-                    <li class="nav-item"><a class="nav-link" href="{% url 'games_api' %}">API Games</a></li>
-                {% endif %}
+                <li class="nav-item">
+                    <a class="nav-link {% if request.resolver_match.url_name == 'games_api' %}active{% endif %}" href="{% url 'games_api' %}">API Games</a>
+                </li>
 
                 {% if user.is_authenticated %}
-                    {% if request.resolver_match.url_name != 'user_page' %}
-                        <li class="nav-item"><a class="nav-link" href="{% url 'user_page' %}"><i class="fas fa-user"></i> {{ user_alias }}</a></li>
-                    {% endif %}
+                    <li class="nav-item">
+                        <a class="nav-link {% if request.resolver_match.url_name == 'user_page' %}active{% endif %}" href="{% url 'user_page' %}"><i class="fas fa-user"></i> {{ user_alias }}</a>
+                    </li>
 
-                    {% if request.resolver_match.url_name != 'rated_games' %}
-                        <li class="nav-item"><a class="nav-link" href="{% url 'rated_games' %}">Rated Games</a></li>
-                    {% endif %}
+                    <li class="nav-item">
+                        <a class="nav-link {% if request.resolver_match.url_name == 'rated_games' %}active{% endif %}" href="{% url 'rated_games' %}">Rated Games</a>
+                    </li>
 
-                    {% if request.resolver_match.url_name != 'followed_games' %}
-                        <li class="nav-item"><a class="nav-link" href="{% url 'followed_games' %}">Followed Games</a></li>
-                    {% endif %}
+                    <li class="nav-item">
+                        <a class="nav-link {% if request.resolver_match.url_name == 'followed_games' %}active{% endif %}" href="{% url 'followed_games' %}">Followed Games</a>
+                    </li>
 
-                    {% if request.resolver_match.url_name != 'settings_page' %}
-                        <li class="nav-item"><a class="nav-link" href="{% url 'settings_page' %}">Settings</a></li>
-                    {% endif %}
+                    <li class="nav-item">
+                        <a class="nav-link {% if request.resolver_match.url_name == 'settings_page' %}active{% endif %}" href="{% url 'settings_page' %}">Settings</a>
+                    </li>
 
-                    {% if request.resolver_match.url_name != 'help' %}
-                        <li class="nav-item"><a class="nav-link" href="{% url 'help' %}">Help</a></li>
-                    {% endif %}
+                    <li class="nav-item">
+                        <a class="nav-link {% if request.resolver_match.url_name == 'help' %}active{% endif %}" href="{% url 'help' %}">Help</a>
+                    </li>
 
                     <li class="nav-item"><a class="nav-link" href="/admin/">Admin</a></li>
                 {% endif %}

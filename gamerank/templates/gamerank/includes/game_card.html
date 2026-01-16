@@ -1,0 +1,64 @@
+<div class="col" id="game-card-{{ game.game_id }}">
+    <div class="card h-100 shadow-sm border-0">
+
+        {% if game.thumbnail %}
+            <img src="{{ game.thumbnail }}" class="card-img-top rounded-top" alt="Image of {{ game.title }}">
+        {% endif %}
+
+        <div class="card-body">
+            <h5 class="card-title text-primary">{{ game.title }}</h5>
+            <p class="card-text mb-1"><strong>Genre:</strong> {{ game.genre }}</p>
+            <p class="card-text mb-1"><strong>Platform:</strong> {{ game.platform }}</p>
+
+            <p class="card-text mb-1">
+                <strong>Rating:</strong>
+                {% with rating=game.score|default:game.average_rating %}
+                    {% if rating %}
+                        {% include "gamerank/includes/stars.html" with rating=rating %}
+                        <span class="ms-2 text-muted small">({{ rating|floatformat:1 }}/5)</span>
+                    {% else %}
+                        <span class="text-muted">N/A</span>
+                    {% endif %}
+                {% endwith %}
+            </p>
+
+            <p class="card-text"><strong>Votes:</strong> {{ game.total_votes }}</p>
+
+            {% if game.my_vote %}
+                <p class="card-text"><strong>Your rating:</strong> {{ game.my_vote }}/5</p>
+            {% endif %}
+        </div>
+
+        <div class="card-footer bg-white border-0 d-flex justify-content-between align-items-center">
+            <a href="{% url 'game_detail' game.game_id %}" class="btn btn-sm btn-outline-primary">
+                View details
+            </a>
+
+            {% if user.is_authenticated %}
+                {% if game.followed %}
+                    <form method="POST" action="{% url 'follow_game_htmx' game.game_id %}" 
+                          hx-post="{% url 'follow_game_htmx' game.game_id %}"
+                          hx-target="#game-card-{{ game.game_id }}"
+                          hx-swap="outerHTML">
+                        {% csrf_token %}
+                        <input type="hidden" name="action" value="unfollow">
+                        <button type="submit" class="btn btn-sm btn-outline-danger">
+                            Unfollow
+                        </button>
+                    </form>
+                {% else %}
+                    <form method="POST" action="{% url 'follow_game_htmx' game.game_id %}"
+                          hx-post="{% url 'follow_game_htmx' game.game_id %}"
+                          hx-target="#game-card-{{ game.game_id }}"
+                          hx-swap="outerHTML">
+                        {% csrf_token %}
+                        <input type="hidden" name="action" value="follow">
+                        <button type="submit" class="btn btn-sm btn-outline-success">
+                            Follow
+                        </button>
+                    </form>
+                {% endif %}
+            {% endif %}
+        </div>
+    </div>
+</div>

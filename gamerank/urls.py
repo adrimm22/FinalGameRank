@@ -27,6 +27,7 @@ urlpatterns = [
     path("game/<str:game_id>/htmx/", views.game_detail_htmx, name="game_detail_htmx"),
     path("game/<str:game_id>/htmx/comments/", views.comments_htmx, name="comments_htmx"),
     path("game/<str:game_id>/htmx/comment/", views.post_comment_htmx, name="post_comment_htmx"),
+    path("game/<str:game_id>/htmx/follow/", views.follow_game_htmx, name="follow_game_htmx"),
 
     # EXTRAS
     path("games/api/", views.unified_games_api, name="games_api"),

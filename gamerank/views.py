@@ -177,6 +177,9 @@ def rated_games(request):
     # Retrieve followed games to mark active buttons
     followed_ids = get_followed_games_ids(request.user)
 
+    for game in games:
+        game.followed = game.game_id in followed_ids
+
     return render(request, 'gamerank/rated_games.html', {
         'games': games,
         'followed_ids': followed_ids,
@@ -200,6 +203,9 @@ def followed_games(request):
 
     # Retrieve followed games to mark active buttons
     followed_ids = get_followed_games_ids(request.user)
+
+    for game in games:
+        game.followed = game.game_id in followed_ids
 
     return render(request, 'gamerank/followed_games.html', {
         'games': games,
@@ -361,6 +367,36 @@ def vote_comment_htmx(request, comment_id):
     html = render_to_string(
         "gamerank/includes/comment_item.html",
         {"comment": comment, "user": request.user}
+    )
+    return HttpResponse(html)
+
+
+@require_POST
+@login_required
+def follow_game_htmx(request, game_id):
+    """
+    Follows or unfollows a game dynamically with HTMX.
+    Returns the updated game card HTML to replace it on the page.
+    If unfollowing on followed_games page, returns empty to remove the card.
+    """
+    game = get_object_or_404(Game, game_id=game_id)
+    action = request.POST.get("action")
+    referer = request.META.get('HTTP_REFERER', '')
+
+    if action == "follow":
+        Follow.objects.get_or_create(user=request.user, game=game)
+        game.followed = True
+    elif action == "unfollow":
+        Follow.objects.filter(user=request.user, game=game).delete()
+        game.followed = False
+        
+        # If on followed_games page, remove the card by returning empty
+        if 'followed' in referer:
+            return HttpResponse('')
+
+    html = render_to_string(
+        "gamerank/includes/game_card.html",
+        {"game": game, "user": request.user}
     )
     return HttpResponse(html)
 
