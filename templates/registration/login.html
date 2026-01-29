@@ -1,33 +1,40 @@
 {% extends "gamerank/base.html" %}
 
 {% block content %}
-<div class="container w-50 mt-5">
+<div class="container mt-5">
+    <div class="auth-form-box mx-auto">
 
-    <h2 class="mb-4 text-center">Log In</h2>
+        <h2 class="mb-4 text-center">Log In</h2>
 
-    {% if form.errors %}
-        <div class="alert alert-danger">
-            <strong>Error!</strong> Incorrect username or password.
-        </div>
-    {% endif %}
+        {% if form.errors %}
+            <div class="alert alert-danger">
+                <strong>Error!</strong> Incorrect username or password.
+            </div>
+        {% endif %}
 
-    <form method="post">
-        {% csrf_token %}
-        <div class="mb-3">
-            <label for="id_username" class="form-label">Username</label>
-            {{ form.username }}
-        </div>
-        <div class="mb-3">
-            <label for="id_password" class="form-label">Password</label>
-            {{ form.password }}
-        </div>
-        <div class="text-center">
-            <button type="submit" class="btn btn-primary">Log In</button>
-        </div>
-    </form>
+        <form method="post" class="auth-form">
+            {% csrf_token %}
+            <div class="mb-3">
+                <label for="id_username" class="form-label">Username</label>
+                {{ form.username }}
+            </div>
+            <div class="mb-3">
+                <label for="id_password" class="form-label">Password</label>
+                {{ form.password }}
+            </div>
+            <div class="text-center mt-4">
+                <button type="submit" class="btn btn-primary px-4">Log In</button>
+            </div>
+        </form>
 
-    <div class="text-center mt-3">
-        <a href="{% url 'home' %}" class="btn btn-link">← Back to Home</a>
+        <div class="auth-form-links text-center mt-4">
+            <p class="mb-2">
+                <a href="{% url 'register' %}">Don't have an account? Register</a>
+            </p>
+            <p class="mb-0">
+                <a href="{% url 'home' %}">← Back to Home</a>
+            </p>
+        </div>
     </div>
 </div>
 {% endblock %}

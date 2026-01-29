@@ -2,6 +2,8 @@ import os
 import json
 
 from django.contrib import messages
+from django.contrib.auth import login
+from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.decorators import login_required
 from django.shortcuts import render, get_object_or_404, redirect
 from django.template.loader import render_to_string
@@ -14,6 +16,22 @@ from finalgamerank import settings
 from .models import Game, Comment, Rating, Follow, UserSettings, CommentVote
 
 import requests
+
+
+def register(request):
+    if request.user.is_authenticated:
+        return redirect('home')
+    if request.method == 'POST':
+        form = UserCreationForm(request.POST)
+        if form.is_valid():
+            user = form.save()
+            UserSettings.objects.get_or_create(user=user, defaults={'alias': user.username})
+            login(request, user)
+            messages.success(request, 'Account created successfully.')
+            return redirect('home')
+    else:
+        form = UserCreationForm()
+    return render(request, 'registration/register.html', {'form': form})
 
 
 def home(request):
